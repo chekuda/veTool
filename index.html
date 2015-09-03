@@ -8,26 +8,33 @@
      
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	
+<link rel="stylesheet" type="text/css" href="css.css">
 </head>
 
 <body>
     <div class="container-fluid ">
         <ul class="nav nav-tabs nav-justified">
             <li class="active"><a href="#">HK</a></li>
-            <li><a href="#">AUS</a></li>
-            <li><a href="#">JP</a></li>
+            <li><a href="#">GB</a></li>
         </ul>
         <div class="jumbotron">
             <div class="container">
-                <h1>HEADER</h1>
-                <p>Here I will try to explain the plan I got to create this tool, making our job a bit easier</p>
-                <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+                <h1>Make your choice</h1>
+                <div class="bnt-group typeTemplate">
+                    <button type="button" class="btn btn-primary active">Generic</button>
+                    <button type="button" class="btn btn-primary">Product Feed</button>
+                    <button type="button" class="btn btn-primary">Both</button>
+                </div>
+                <div class="bnt-group btn-group-xs standardChoice collapse">
+                    <button type="button" class="btn btn-primary">Standard 1</button>
+                    <button type="button" class="btn btn-primary">Standard 2</button>
+                    <button type="button" class="btn btn-primary">Standard 3</button>
+                </div>
             </div>
         </div>
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h3 class="panel-title">Please add the link below
+                <h3 class="panel-title">Templates selected
             </div>
                 <div class="panel-body">
                     <input type="text" class="form-control" placeholder="type your link here">
@@ -156,6 +163,7 @@
     <!--text editor-->
     <script src="//tinymce.cachefly.net/4.2/tinymce.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js.js"></script>
     </body>
 </html>
