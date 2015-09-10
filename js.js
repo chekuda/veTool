@@ -1,5 +1,19 @@
+$(function () {
+  // Grab the template script
+  var theTemplateScript = $("#application").html();
 
-window.onload= function (){
+  // Compile the template
+  var theTemplate = Handlebars.compile(theTemplateScript);
+  var context={
+  	"veChat":"hello"
+  }
+var theCompiledHtml = theTemplate(context);
+  // Add the compiled html to the page
+  $('body').html(theCompiledHtml);
+});
+
+
+/*window.onload= function (){
 
 	$(".typeTemplate .btn").on('click', showElements);
 
@@ -16,4 +30,4 @@ window.onload= function (){
 		$(".standardChoice").collapse('toggle');
 
 	}
-}
+}*/
