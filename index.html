@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <html>
 <head>
     <title>veTool</title>
@@ -8,66 +9,161 @@
      
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!--carousel slick-->
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
 <link rel="stylesheet" type="text/css" href="css.css">
 </head>
 
 <body>
-    <div class="container-fluid ">
-        <ul class="nav nav-tabs nav-justified">
-            <li class="active"><a href="#">veChat</a></li>
-            <li><a href="#">veContact</a></li>
-        </ul>
-        <div class="jumbotron">
-            <div class="container">
-                <h1>veChat</h1>
-                <p><strong>Re-engage your customers before they abandon your site with VePrompt website overlays</strong><br>
- 
-VeChat reduces abandonment within the shopping cart and product pages by providing you with an opportunity for real time re-engagement with customers before they leave your site. </p>
-                <!--<div class="bnt-group typeTemplate">
-                    <button type="button" class="btn btn-primary active">Generic</button>
-                    <button type="button" class="btn btn-primary">Product Feed</button>
-                    <button type="button" class="btn btn-primary">Both</button>
-                </div>
-                <div class="bnt-group btn-group-xs standardChoice collapse">
-                    <button type="button" class="btn btn-primary">Standard 1</button>
-                    <button type="button" class="btn btn-primary">Standard 2</button>
-                    <button type="button" class="btn btn-primary">Standard 3</button>
-                </div>-->
+    <div class="container-fluid">
+        <div id="topBar">
+            <div class="topBarmenu logo">
+                <img src="http://jobs.theguardian.com/getasset/81dd4783-e2e1-4d2d-a9c2-bce64ef5ff6b/">
+            </div>
+            <div class="topBarmenu topnav">
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="active"><a href="#">veChat</a></li>
+                    <li><a href="#">veContact</a></li>
+                </ul>
             </div>
         </div>
-
-        
-
-        <div class="categoryGroup">
-                <button type="button" class="menuCategory btn btn-success active">SPORT</button>
-                <button type="button" class="menuCategory btn btn-success">TRAVEL</button>
-                <button type="button" class="menuCategory btn btn-success">FASHION</button>
-                <button type="button" class="menuCategory btn btn-success">BUSINESS</button>
-                <button type="button" class="menuCategory btn btn-success">TECHNOLOGY</button>
-        </div>
-        
-        <div class="space"></div>
-        
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Templates selected
+        <div id="content">
+            
+            <div class="bannerImage">
+                <img src="images/bannerImage.png">
+            </div>
+            <!--<div class="jumbotron">
+                <div class="container">
+                    <h1>veChat</h1>
+                    <p><strong>Re-engage your customers before they abandon your site with VePrompt website overlays</strong><br>
+     
+    VeChat reduces abandonment within the shopping cart and product pages by providing you with an opportunity for real time re-engagement with customers before they leave your site. </p>
+                    <div class="bnt-group typeTemplate">
+                        <button type="button" class="btn btn-primary active">Generic</button>
+                        <button type="button" class="btn btn-primary">Product Feed</button>
+                        <button type="button" class="btn btn-primary">Both</button>
+                    </div>
+                    <div class="bnt-group btn-group-xs standardChoice collapse">
+                        <button type="button" class="btn btn-primary">Standard 1</button>
+                        <button type="button" class="btn btn-primary">Standard 2</button>
+                        <button type="button" class="btn btn-primary">Standard 3</button>
+                    </div>
                 </div>
-                <div class="panel-body">
-                    <input type="text" class="form-control" placeholder="type your link here">
+            </div>-->
+
+            
+            <div class="space"></div>
+            <div class="categoryGroup">
+                    <div class="subCategoryGroup">
+                    <button type="button" class="menuCategory btn btn-success active">SPORT</button>
+                    <button type="button" class="menuCategory btn btn-success">TRAVEL</button>
+                    <button type="button" class="menuCategory btn btn-success">FASHION</button>
+                    <button type="button" class="menuCategory btn btn-success">BUSINESS</button>
+                    <button type="button" class="menuCategory btn btn-success">TECHNOLOGY</button>
                 </div>
             </div>
-        
-        <button type="button" class="btn btn-lg"> Click here</button>
-        <div class="collapse">
-            Hello here we are
+            
+            <div class="space"></div>
+            <div class="carouselChat">
+                <div>
+                    <img width="200" heigh="150" src="images/chats/adult_products_creative1.jpg">
+                </div>
+                <div>
+                    <img width="200" heigh="150" src="images/chats/cosmetic_creative1.jpg">
+                </div>
+                <div>
+                    <img width="200" heigh="150" src="images/chats/finance_v1.jpg">
+                </div>
+                 <div>
+                    <img width="200" heigh="150" src="images/chats/generic_creative1.jpg">
+                </div>
+                 <div>
+                    <img width="200" heigh="150" src="images/chats/generic_creative2.jpg">
+                </div>
+                      
+            </div>
+            <div class="space"></div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Templates selected
+                    </div>
+                    <div class="panel-body">
+                        <input type="text" class="form-control" placeholder="type your link here">
+                    </div>
+                </div>
+            
+            <button type="button" class="btn btn-lg"> Click here</button>
+            <div class="collapse">
+                Hello here we are
+            </div>
+            <!--DropDown menu-->
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button"
+                  id="dropdownMenu1" data-toggle="dropdown">
+            Menú desplegable
+            <span class="caret"></span>
+          </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation">
+              <a role="menuitem" tabindex="-1" href="#">Acción</a>
+            </li>
+            <li role="presentation">
+              <a role="menuitem" tabindex="-1" href="#">Otra acción</a>
+            </li>
+            <li role="presentation">
+              <a role="menuitem" tabindex="-1" href="#">Otra acción más</a>
+            </li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation">
+              <a role="menuitem" tabindex="-1" href="#">Acción separada</a>
+            </li>
+          </ul>
         </div>
-        <!--DropDown menu-->
+        <!--Buttons menu-->
+        <div class="btn-toolbar" role="toolbar">
+          <div class="btn-group">
+            <button type="button" class="btn btn-default">1</button>
+            <button type="button" class="btn btn-default">2</button>
+            <button type="button" class="btn btn-default">3</button>
+            <button type="button" class="btn btn-default">4</button>
+          </div>
+        </div>
+    <!--bopstrap button-->
+            <button type="button" class="btn btn-ttc btn-lg">Guardar cambios</button>
+    <!--quote for any explanation-->
+            <blockquote>
+      <p>Prueba de bloquote</p>
+    </blockquote>
+    <!--Check box in line-->
+    <label class="checkbox-inline">
+        <input type="checkbox" value="option1">1
+    </label>
+    <label class="checkbox-inline">
+        <input type="checkbox" value="option2">2
+    </label>
+    <label class="checkbox-inline">
+        <input type="checkbox" value="option3">3
+    </label>
+    <!--Drop down list-->
+    <select class="form-control">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+    </select>
+
+    <select multiple class="form-control">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <!--DropDown menu-->
     <div class="dropdown">
-      <button class="btn dropdown-toggle" type="button"
-              id="dropdownMenu1" data-toggle="dropdown">
-        Menú desplegable
-        <span class="caret"></span>
-      </button>
+        <button class="btn dropdown-toggle sr-only" data-toggle="dropdown">Menu desplegable <span class="caret"></span></button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
         <li role="presentation">
           <a role="menuitem" tabindex="-1" href="#">Acción</a>
@@ -84,93 +180,35 @@ VeChat reduces abandonment within the shopping cart and product pages by providi
         </li>
       </ul>
     </div>
-    <!--Buttons menu-->
-    <div class="btn-toolbar" role="toolbar">
-      <div class="btn-group">
-        <button type="button" class="btn btn-default">1</button>
-        <button type="button" class="btn btn-default">2</button>
-        <button type="button" class="btn btn-default">3</button>
-        <button type="button" class="btn btn-default">4</button>
-      </div>
-    </div>
-<!--bopstrap button-->
-        <button type="button" class="btn btn-ttc btn-lg">Guardar cambios</button>
-<!--quote for any explanation-->
-        <blockquote>
-  <p>Prueba de bloquote</p>
-</blockquote>
-<!--Check box in line-->
-<label class="checkbox-inline">
-    <input type="checkbox" value="option1">1
-</label>
-<label class="checkbox-inline">
-    <input type="checkbox" value="option2">2
-</label>
-<label class="checkbox-inline">
-    <input type="checkbox" value="option3">3
-</label>
-<!--Drop down list-->
-<select class="form-control">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-</select>
-
-<select multiple class="form-control">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-</select>
-<!--DropDown menu-->
-<div class="dropdown">
-    <button class="btn dropdown-toggle sr-only" data-toggle="dropdown">Menu desplegable <span class="caret"></span></button>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation">
-      <a role="menuitem" tabindex="-1" href="#">Acción</a>
-    </li>
-    <li role="presentation">
-      <a role="menuitem" tabindex="-1" href="#">Otra acción</a>
-    </li>
-    <li role="presentation">
-      <a role="menuitem" tabindex="-1" href="#">Otra acción más</a>
-    </li>
-    <li role="presentation" class="divider"></li>
-    <li role="presentation">
-      <a role="menuitem" tabindex="-1" href="#">Acción separada</a>
-    </li>
-  </ul>
-</div>
-<!--table with alarms-->
-        <div class="table-responsive">
-            <table class="table table-hover">
-                <tr class="danger">
-                    <td>
-                    Primera
-                    </td>
-                    <td>
-                    Primera 1
-                    </td>
-                </tr>
-                <tr class="warning">
-                    <td>
-                    Segunda
-                    </td>
-                    <td>
-                    Segunda 1
-                    </td>
-                </tr>
-                <tr class="success">
-                    <td>
-                    Segunda
-                    </td>
-                    <td>
-                    Segunda 1
-                    </td>
-                </tr>
-            </table>
+    <!--table with alarms-->
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <tr class="danger">
+                        <td>
+                        Primera
+                        </td>
+                        <td>
+                        Primera 1
+                        </td>
+                    </tr>
+                    <tr class="warning">
+                        <td>
+                        Segunda
+                        </td>
+                        <td>
+                        Segunda 1
+                        </td>
+                    </tr>
+                    <tr class="success">
+                        <td>
+                        Segunda
+                        </td>
+                        <td>
+                        Segunda 1
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
     <!--Jquery library CDN-->
@@ -181,6 +219,10 @@ VeChat reduces abandonment within the shopping cart and product pages by providi
     <script src="//tinymce.cachefly.net/4.2/tinymce.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!--carousel slick-->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script type="text/javascript" src="js.js"></script>
+
+
     </body>
 </html>

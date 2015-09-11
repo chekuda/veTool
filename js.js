@@ -1,33 +1,29 @@
-$(function () {
-  // Grab the template script
-  var theTemplateScript = $("#application").html();
-
-  // Compile the template
-  var theTemplate = Handlebars.compile(theTemplateScript);
-  var context={
-  	"veChat":"hello"
-  }
-var theCompiledHtml = theTemplate(context);
-  // Add the compiled html to the page
-  $('body').html(theCompiledHtml);
+$(document).ready(function(){
+  $('.carouselChat').slick({
+      centerMode: true,
+	  centerPadding: '60px',
+	  slidesToShow: 3,
+	  //dots: true,
+	  responsive: [
+	    {
+	      breakpoint: 768,
+	      settings: {
+	        arrows: false,
+	        centerMode: true,
+	        centerPadding: '40px',
+	        slidesToShow: 3
+	      }
+	    },
+	    {
+	      breakpoint: 480,
+	      settings: {
+	        arrows: false,
+	        centerMode: true,
+	        centerPadding: '40px',
+	        slidesToShow: 1
+	      }
+	    }
+	  ]
+	  });
 });
-
-
-/*window.onload= function (){
-
-	$(".typeTemplate .btn").on('click', showElements);
-
-
-	//Function to show lements
-
-	function showElements(){
-
-		if(!$(this).hasClass('active'))
-		{
-			$(".typeTemplate .btn").removeClass('active');
-			$(this).addClass('active');
-		}
-		$(".standardChoice").collapse('toggle');
-
-	}
-}*/
+				

@@ -1,23 +1,55 @@
 body{
-
+ 
 }
+.bannerImage{
+	text-align:center;
+}
+.bannerImage img{
+	width: 80%;
+    height: 300px;
+    border-radius: 5px;
+    
+ }
+ .carouselChat{
+ 	width: 70%;
+ 	margin: 0 auto;
+ 	border: solid 1px #cccccc;
+    padding: 10px;
+    border-radius: 4px;
+ }
+ .carouselChat img{
+ 	    margin: 0 auto;
+ }
 .categoryGroup{
-	width: 70%;
+	width: 60%;
     margin: 0 auto;
     text-align: center;
     padding: 18px;
     border-radius: 9px;
     border: solid 1px #ccc;
-    overflow-x: hidden;
+    overflow-x:hidden;
+    max-height: 140px;
+    overflow-y: hidden;
 
+}
+.categoryGroup:hover{
+	overflow-x: scroll;
+}
+.categoryGroup .subCategoryGroup{
+	    width: 790px;
+	    margin-top: 0px;
+}
+
+#content{
+	background-color: #F0F0F0;
 }
 .jumbotron{
 	background-color: #B3D334;
 }
 .menuCategory{
-	width: 24%;
+	width: 150px;
     height: 100px;
-    font-size: 170%;
+    font-size: 130%;
     background-color: #B3D334;
     margin: 2px;
 }
@@ -44,4 +76,19 @@ body{
 .standardChoice{
 	margin-top: 10px;
 	
+}
+.topBarmenu.logo{
+	width: 200px;
+	float: left;
+}
+
+@media (max-width: 768px) {
+	.topBarmenu.logo{
+	        width: 150px;
+		    float: none;
+		    margin: 0 auto;
+	}
+}
+.topBarmenu.topnav .nav>li{
+	bottom: -10px;
 }
