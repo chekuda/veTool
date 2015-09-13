@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <title>veTool</title>
     <meta charset="utf-8">
@@ -14,58 +14,61 @@
 <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
 <link rel="stylesheet" type="text/css" href="css.css">
+<!--Jquery library CDN-->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 </head>
 
 <body>
     <div class="container-fluid">
-        <div id="topBar">
-            <div class="topBarmenu logo">
-                <img src="http://jobs.theguardian.com/getasset/81dd4783-e2e1-4d2d-a9c2-bce64ef5ff6b/">
+        <nav class="navbar navbar-default topBarmenu" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+            data-target=".navbar-ex1-collapse">
+                  <span class="sr-only">Show navigation bar</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logo" href="#">
+                    <img src="images/logo_ve.png">
+                </a>
             </div>
-            <div class="topBarmenu topnav">
-                <ul class="nav nav-tabs nav-justified">
+             <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav topNavOptions">
                     <li class="active"><a href="#">veChat</a></li>
                     <li><a href="#">veContact</a></li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right topNavOptions">
+                    <li><a href="#">contact us</a></li>
+                </ul>   
             </div>
-        </div>
+
+        </nav>
         <div id="content">
             
             <div class="bannerImage">
-                <img src="images/bannerImage.png">
+                <video id="teaser-video" muted="" autoplay="" loop="" controls=""> 
+                            <source src="http://www.veinteractive.com/sites/default/files/journey_1280webm.webm" type="video/webm"> 
+                            
+                    </video>
+                <!--<img src="images/bannerImage.png">-->
             </div>
-            <!--<div class="jumbotron">
-                <div class="container">
-                    <h1>veChat</h1>
-                    <p><strong>Re-engage your customers before they abandon your site with VePrompt website overlays</strong><br>
-     
-    VeChat reduces abandonment within the shopping cart and product pages by providing you with an opportunity for real time re-engagement with customers before they leave your site. </p>
-                    <div class="bnt-group typeTemplate">
-                        <button type="button" class="btn btn-primary active">Generic</button>
-                        <button type="button" class="btn btn-primary">Product Feed</button>
-                        <button type="button" class="btn btn-primary">Both</button>
-                    </div>
-                    <div class="bnt-group btn-group-xs standardChoice collapse">
-                        <button type="button" class="btn btn-primary">Standard 1</button>
-                        <button type="button" class="btn btn-primary">Standard 2</button>
-                        <button type="button" class="btn btn-primary">Standard 3</button>
-                    </div>
-                </div>
-            </div>-->
+           
 
             
             <div class="space"></div>
             <div class="categoryGroup">
                     <div class="subCategoryGroup">
-                    <button type="button" class="menuCategory btn btn-success active">SPORT</button>
-                    <button type="button" class="menuCategory btn btn-success">TRAVEL</button>
-                    <button type="button" class="menuCategory btn btn-success">FASHION</button>
-                    <button type="button" class="menuCategory btn btn-success">BUSINESS</button>
-                    <button type="button" class="menuCategory btn btn-success">TECHNOLOGY</button>
+                    <button type="button" class="menuCategory btn">SPORT</button>
+                    <button type="button" class="menuCategory btn">TRAVEL</button>
+                    <button type="button" class="menuCategory btn">FASHION</button>
+                    <button type="button" class="menuCategory btn">BUSINESS</button>
+                    <button type="button" class="menuCategory btn">TECH</button>
                 </div>
             </div>
             
             <div class="space"></div>
+            
             <div class="carouselChat">
                 <div>
                     <img width="200" heigh="150" src="images/chats/adult_products_creative1.jpg">
@@ -84,135 +87,20 @@
                 </div>
                       
             </div>
-            <div class="space"></div>
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Templates selected
-                    </div>
-                    <div class="panel-body">
-                        <input type="text" class="form-control" placeholder="type your link here">
-                    </div>
-                </div>
+           
+            <div class="termConditions">
+                <input type="checkbox" value="veChatAccepted">Agree with <a href="#">Terms and Conditions</a>
+            </div>
+            <div class="bottomButtons">
+                <button type="button" class="menuBottom btn">Next</button>
+            </div>
             
-            <button type="button" class="btn btn-lg"> Click here</button>
-            <div class="collapse">
-                Hello here we are
-            </div>
-            <!--DropDown menu-->
-        <div class="dropdown">
-          <button class="btn dropdown-toggle" type="button"
-                  id="dropdownMenu1" data-toggle="dropdown">
-            Menú desplegable
-            <span class="caret"></span>
-          </button>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-            <li role="presentation">
-              <a role="menuitem" tabindex="-1" href="#">Acción</a>
-            </li>
-            <li role="presentation">
-              <a role="menuitem" tabindex="-1" href="#">Otra acción</a>
-            </li>
-            <li role="presentation">
-              <a role="menuitem" tabindex="-1" href="#">Otra acción más</a>
-            </li>
-            <li role="presentation" class="divider"></li>
-            <li role="presentation">
-              <a role="menuitem" tabindex="-1" href="#">Acción separada</a>
-            </li>
-          </ul>
         </div>
-        <!--Buttons menu-->
-        <div class="btn-toolbar" role="toolbar">
-          <div class="btn-group">
-            <button type="button" class="btn btn-default">1</button>
-            <button type="button" class="btn btn-default">2</button>
-            <button type="button" class="btn btn-default">3</button>
-            <button type="button" class="btn btn-default">4</button>
-          </div>
-        </div>
-    <!--bopstrap button-->
-            <button type="button" class="btn btn-ttc btn-lg">Guardar cambios</button>
-    <!--quote for any explanation-->
-            <blockquote>
-      <p>Prueba de bloquote</p>
-    </blockquote>
-    <!--Check box in line-->
-    <label class="checkbox-inline">
-        <input type="checkbox" value="option1">1
-    </label>
-    <label class="checkbox-inline">
-        <input type="checkbox" value="option2">2
-    </label>
-    <label class="checkbox-inline">
-        <input type="checkbox" value="option3">3
-    </label>
-    <!--Drop down list-->
-    <select class="form-control">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-    </select>
-
-    <select multiple class="form-control">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-    <!--DropDown menu-->
-    <div class="dropdown">
-        <button class="btn dropdown-toggle sr-only" data-toggle="dropdown">Menu desplegable <span class="caret"></span></button>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-        <li role="presentation">
-          <a role="menuitem" tabindex="-1" href="#">Acción</a>
-        </li>
-        <li role="presentation">
-          <a role="menuitem" tabindex="-1" href="#">Otra acción</a>
-        </li>
-        <li role="presentation">
-          <a role="menuitem" tabindex="-1" href="#">Otra acción más</a>
-        </li>
-        <li role="presentation" class="divider"></li>
-        <li role="presentation">
-          <a role="menuitem" tabindex="-1" href="#">Acción separada</a>
-        </li>
-      </ul>
-    </div>
-    <!--table with alarms-->
-            <div class="table-responsive">
-                <table class="table table-hover">
-                    <tr class="danger">
-                        <td>
-                        Primera
-                        </td>
-                        <td>
-                        Primera 1
-                        </td>
-                    </tr>
-                    <tr class="warning">
-                        <td>
-                        Segunda
-                        </td>
-                        <td>
-                        Segunda 1
-                        </td>
-                    </tr>
-                    <tr class="success">
-                        <td>
-                        Segunda
-                        </td>
-                        <td>
-                        Segunda 1
-                        </td>
-                    </tr>
-                </table>
-            </div>
+        <div class="footer">
+            © 2015 Ve Interactive Asia
         </div>
     </div>
-    <!--Jquery library CDN-->
-    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    
     <!--Adding lodash for read the document-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
     <!--text editor-->

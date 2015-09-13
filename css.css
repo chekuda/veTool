@@ -16,15 +16,21 @@ body{
  	border: solid 1px #cccccc;
     padding: 10px;
     border-radius: 4px;
+    visibility: hidden;
+ 	height: 0px;
  }
+
  .carouselChat img{
  	    margin: 0 auto;
+ 	    width: 200px;
+ 	    height: 150px;
+ 	    
  }
 .categoryGroup{
-	width: 60%;
+	width: 65%;
     margin: 0 auto;
-    text-align: center;
-    padding: 18px;
+    padding-top: 18px;
+    padding-bottom: 18px;
     border-radius: 9px;
     border: solid 1px #ccc;
     overflow-x:hidden;
@@ -36,16 +42,78 @@ body{
 	overflow-x: scroll;
 }
 .categoryGroup .subCategoryGroup{
-	    width: 790px;
+	    width: 786px;
 	    margin-top: 0px;
+	    margin: 0 auto;
+}
+.categoryGroup .subCategoryGroup::before{
+	.glyphicon.glyphicon-chevron-left();
 }
 
 #content{
-	background-color: #F0F0F0;
+	/****with video***/
+	background-color: #091D2A;
+	/****normal***/
+	/*background: #c5c3c3; 
+	background: -moz-linear-gradient(top,  #c5c3c3 0%, #9c9a9a 0%, #b5b3b3 0%, #d2cece 19%, #e8e4e4 60%, #f7f7f7 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c5c3c3), color-stop(0%,#9c9a9a), color-stop(0%,#b5b3b3), color-stop(19%,#d2cece), color-stop(60%,#e8e4e4), color-stop(100%,#f7f7f7)); 
+	background: -webkit-linear-gradient(top,  #c5c3c3 0%,#9c9a9a 0%,#b5b3b3 0%,#d2cece 19%,#e8e4e4 60%,#f7f7f7 100%); 
+	background: -o-linear-gradient(top,  #c5c3c3 0%,#9c9a9a 0%,#b5b3b3 0%,#d2cece 19%,#e8e4e4 60%,#f7f7f7 100%); 
+	background: -ms-linear-gradient(top,  #c5c3c3 0%,#9c9a9a 0%,#b5b3b3 0%,#d2cece 19%,#e8e4e4 60%,#f7f7f7 100%); 
+	background: linear-gradient(to bottom,  #c5c3c3 0%,#9c9a9a 0%,#b5b3b3 0%,#d2cece 19%,#e8e4e4 60%,#f7f7f7 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5c3c3', endColorstr='#f7f7f7',GradientType=0 ); */
+	padding-bottom: 15px;
+}
+.footer{
+	position: relative;
+    bottom: 0px;
+    background-color: #323F48;
+    height: 50px;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 15px;
+    color: #fff;
+    border-radius: 4px;
 }
 .jumbotron{
 	background-color: #B3D334;
 }
+.logo{
+	padding-top: 0px;
+	margin-right: 50px;
+}
+.logo img{
+	width: 50px;
+    height: 50px;
+}	
+
+.bottomButtons{
+	width: 200px;
+	text-align:center;
+	margin: 0 auto;
+}
+
+.menuBottom.btn{
+	-webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 12px #666666;
+  -moz-box-shadow: 2px 2px 12px #666666;
+  box-shadow: 2px 2px 12px #666666;
+  font-family: Arial;
+  color: #323F48;
+  font-size: 20px;
+  background: #ffffff;
+  /*padding: 20px 20px 20px 20px;*/	
+  text-decoration: none;
+  
+}
+.menuBottom.btn:hover{
+background: #efefef;
+  text-decoration: none;
+
+}
+
 .menuCategory{
 	width: 150px;
     height: 100px;
@@ -53,12 +121,35 @@ body{
     background-color: #B3D334;
     margin: 2px;
 }
-.menuCategory:hover{
-	background-color: #9E9A9A;
+.menuCategory.btn{
+	-webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 12px #666666;
+  -moz-box-shadow: 2px 2px 12px #666666;
+  box-shadow: 2px 2px 12px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #B3D334;
+  padding: 20px 20px 20px 20px;
+  text-decoration: none;
+
+
 }
-.menuCategory.active{
-	background-color: #9E9A9A;
+
+.menuCategory.btn:hover{
+	background: #323F48;
+	animation-name: changeColor;
+	animation-duration: 2s;
+	text-decoration: none;
 }
+.menuCategory.btn.active{
+	background: #323F48;
+  text-decoration: none;
+}
+
+
 
 /*Start top menu*/
 .nav-tabs.nav-justified{
@@ -69,6 +160,9 @@ body{
 }
 /*End top menu*/
 
+.slick-initialized .slick-slide{
+	margin-top: 20px;
+}
 .space{
 	margin-top: 20px;
 	margin-bottom: 10px;
@@ -77,18 +171,51 @@ body{
 	margin-top: 10px;
 	
 }
-.topBarmenu.logo{
-	width: 200px;
-	float: left;
+.termConditions{
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.topBarmenu{
+	margin-top: 20px;
+	background-color: #323F48;
+}
+.topNavOptions li a{
+	color: #fff !important;
+}
+.topNavOptions li.active a{
+	color: #555 !important;
 }
 
+
 @media (max-width: 768px) {
-	.topBarmenu.logo{
-	        width: 150px;
-		    float: none;
-		    margin: 0 auto;
+	.categoryGroup .subCategoryGroup{
+		width: 420px;
 	}
+	.carouselChat img{
+		width: 100px;
+		height: 75px;
+	}
+	.menuCategory{
+		width: 75px;
+	    height: 50px;
+	    background-color: #B3D334;
+	    margin: 2px;
+	}
+	.menuCategory.btn{
+		padding: 5px;	
+		font-size: 12px;
+	}
+	
+	.slick-initialized .slick-slide{
+	margin-top: 8px;
+	}
+	
 }
-.topBarmenu.topnav .nav>li{
-	bottom: -10px;
+
+@keyframes changeColor{
+	from {background-color: #B3D334;}
+    to {background-color: #323F48;}
 }
