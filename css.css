@@ -3,11 +3,13 @@ body{
 }
 .bannerImage{
 	text-align:center;
+	overflow-x: hidden;
 }
 .bannerImage img{
 	width: 80%;
     height: 300px;
     border-radius: 5px;
+
     
  }
  .carouselChat{
@@ -39,7 +41,7 @@ body{
 
 }
 .categoryGroup:hover{
-	overflow-x: scroll;
+	overflow-x: hidden;
 }
 .categoryGroup .subCategoryGroup{
 	    width: 786px;
@@ -171,6 +173,9 @@ background: #efefef;
 	margin-top: 10px;
 	
 }
+#teaser-video{
+	height: 470px;
+}
 .termConditions{
 	width: 50%;
 	margin: 0 auto;
@@ -191,8 +196,12 @@ background: #efefef;
 
 
 @media (max-width: 768px) {
+	.categoryGroup:hover{
+	overflow-x: scroll;
+	}	
 	.categoryGroup .subCategoryGroup{
 		width: 420px;
+
 	}
 	.carouselChat img{
 		width: 100px;
@@ -212,9 +221,12 @@ background: #efefef;
 	.slick-initialized .slick-slide{
 	margin-top: 8px;
 	}
+	#teaser-video{
+		height: 195px;
+	}
 	
 }
-
+/******ANIMATION******/
 @keyframes changeColor{
 	from {background-color: #B3D334;}
     to {background-color: #323F48;}
