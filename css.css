@@ -9,14 +9,13 @@ body{
 	width: 80%;
     height: 300px;
     border-radius: 5px;
-
+    display: none;
     
  }
  .carouselChat{
  	width: 70%;
  	margin: 0 auto;
  	border: solid 1px #cccccc;
-    padding: 10px;
     border-radius: 4px;
     visibility: hidden;
  	height: 0px;
@@ -26,6 +25,8 @@ body{
  	    margin: 0 auto;
  	    width: 200px;
  	    height: 150px;
+ 	    margin-top: 10px;
+ 	    margin-bottom: 10px;
  	    
  }
 .categoryGroup{
@@ -66,6 +67,7 @@ body{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5c3c3', endColorstr='#f7f7f7',GradientType=0 ); */
 	padding-bottom: 15px;
 }
+
 .footer{
 	position: relative;
     bottom: 0px;
@@ -111,7 +113,7 @@ body{
   
 }
 .menuBottom.btn:hover{
-background: #efefef;
+	background: #efefef;
   text-decoration: none;
 
 }
@@ -141,14 +143,16 @@ background: #efefef;
 }
 
 .menuCategory.btn:hover{
-	background: #323F48;
+	background-color: #fff;
 	animation-name: changeColor;
-	animation-duration: 2s;
+	animation-duration: 1s;
 	text-decoration: none;
+	color: #091D2A;
 }
 .menuCategory.btn.active{
-	background: #323F48;
-  text-decoration: none;
+	  background: #ffffff;
+	  text-decoration: none;
+	  color: #091D2A;
 }
 
 
@@ -175,6 +179,7 @@ background: #efefef;
 }
 #teaser-video{
 	height: 470px;
+	display: block;
 }
 .termConditions{
 	width: 50%;
@@ -196,7 +201,11 @@ background: #efefef;
 
 
 @media (max-width: 768px) {
-	
+	.bannerImage img{
+		display: block;
+		margin: 0 auto;
+	}
+
 	.categoryGroup:hover{
 	overflow-x: scroll;
 	}	
@@ -224,11 +233,12 @@ background: #efefef;
 	}
 	#teaser-video{
 		height: 195px;
+		display: none;
 	}
 	
 }
 /******ANIMATION******/
 @keyframes changeColor{
-	from {background-color: #B3D334;}
-    to {background-color: #323F48;}
+	from {background-color: #B3D334;color: #fff;}
+    to {background-color: #fff; color: #091D2A;}
 }

@@ -36,14 +36,16 @@
 
 window.onload= function ()
     {
+
+
 /******Open Carousel*****/  
 	
 	$(".subCategoryGroup .btn:last").on("click",showSlider);
 
 
 		function showSlider(){
-			$('.carouselChat').css({"visibility":"visible","height":"212px"})
-			
+			$('.carouselChat').css({"visibility":"visible","height":"auto"})
+
 			console.log("done");
 		}
 
@@ -57,6 +59,19 @@ window.onload= function ()
 				$(this).addClass("active");
 			}
 		}
+
+
+	/*carousel*****/
+	var elem = document.querySelector('.main-gallery');
+	var flkty = new Flickity( elem, {
+	  // options
+
+	  cellAlign: 'left',
+	  contain: true,
+	  imagesLoaded: true,
+	  wrapAround: true,
+	  freeScroll: true
+	});
 
 }
 
