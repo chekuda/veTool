@@ -1,7 +1,8 @@
-$(document).ready(function(){
+/******carousel*****/
+/*$(document).ready(function(){
 
 
-  /******carousel*****/
+  
   $('.carouselChat').slick({
       centerMode: true,
 	  centerPadding: '60px',
@@ -31,7 +32,7 @@ $(document).ready(function(){
 
 
 
-});
+});*/
 
 window.onload= function ()
     {

@@ -196,6 +196,7 @@ background: #efefef;
 
 
 @media (max-width: 768px) {
+	
 	.categoryGroup:hover{
 	overflow-x: scroll;
 	}	
