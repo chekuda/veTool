@@ -1,4 +1,5 @@
 body{
+  background-image: url(https://assets.brandfolder.com/8h6rjb4l/original/business%20faqs.jpg);
  
 }
 .bannerImage{
@@ -13,7 +14,7 @@ body{
     
  }
  .carouselChat{
- 	width: 70%;
+ 	width: 80%;
  	margin: 0 auto;
  	border: solid 1px #cccccc;
     border-radius: 4px;
@@ -30,7 +31,7 @@ body{
  	    
  }
 .categoryGroup{
-	width: 65%;
+	width: 95%;
     margin: 0 auto;
     padding-top: 18px;
     padding-bottom: 18px;
@@ -55,7 +56,7 @@ body{
 
 #content{
 	/****with video***/
-	background-color: #091D2A;
+	background-color: transparent;
 	/****normal***/
 	/*background: #c5c3c3; 
 	background: -moz-linear-gradient(top,  #c5c3c3 0%, #9c9a9a 0%, #b5b3b3 0%, #d2cece 19%, #e8e4e4 60%, #f7f7f7 100%); 
@@ -66,6 +67,9 @@ body{
 	background: linear-gradient(to bottom,  #c5c3c3 0%,#9c9a9a 0%,#b5b3b3 0%,#d2cece 19%,#e8e4e4 60%,#f7f7f7 100%); 
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5c3c3', endColorstr='#f7f7f7',GradientType=0 ); */
 	padding-bottom: 15px;
+}
+.container-fluid{
+	width: 861px;
 }
 
 .footer{
@@ -180,6 +184,9 @@ body{
 #teaser-video{
 	height: 470px;
 	display: block;
+    width: 833px;
+    margin: auto;
+    border-radius: 12px;
 }
 .termConditions{
 	width: 50%;
@@ -201,13 +208,17 @@ body{
 
 
 @media (max-width: 768px) {
+	body{
+		background: transparent;
+	}
 	.bannerImage img{
 		display: block;
 		margin: 0 auto;
+		height: 200px;
 	}
-
-	.categoryGroup:hover{
-	overflow-x: scroll;
+   
+	.categoryGroup{
+	   overflow-x: auto;
 	}	
 	.categoryGroup .subCategoryGroup{
 		width: 420px;
@@ -216,6 +227,12 @@ body{
 	.carouselChat img{
 		width: 100px;
 		height: 75px;
+	}
+	.container-fluid{
+	width: 100%;
+	}
+	#content{
+	background-color: #091D2A;
 	}
 	.menuCategory{
 		width: 75px;
