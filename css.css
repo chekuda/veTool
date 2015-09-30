@@ -194,6 +194,16 @@ body{
 	text-align: center;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	color: #fff;
+}
+.termConditions a{
+	
+	color: #fff;
+	text-decoration: underline;
+}
+#termConditionCheck{
+	margin-top: 10px;
+	margin-right: 6px;
 }
 .topBarmenu{
 	margin-top: 20px;

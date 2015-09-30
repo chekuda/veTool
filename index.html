@@ -13,11 +13,13 @@
 <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>-->
 <!-- flickity... -->
-  <link rel="stylesheet" href="flickity/flickity.css" media="screen">
+<link rel="stylesheet" href="flickity/flickity.css" media="screen">
 
 <link rel="stylesheet" type="text/css" href="css.css">
-<!--Jquery library CDN-->
-    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<!--Chocolate for images-->
+<link rel="stylesheet" href="chocolat.css" type="text/css" media="screen" charset="utf-8">
+
+
 </head>
 <body>
     <div class="container-fluid">
@@ -36,8 +38,8 @@
             </div>
              <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav topNavOptions">
-                    <li class="active"><a href="#">veChat</a></li>
-                    <li><a href="#">veContact</a></li>
+                    <li class="active"><a href="../veTool/index.html">VeChat</a></li>
+                    <li><a href="../veTool/veContact.html">VeContact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right topNavOptions">
                     <li><a href="#">contact us</a></li>
@@ -49,7 +51,7 @@
             
             <div class="bannerImage">
                 <video id="teaser-video" muted="" autoplay="" loop="" > 
-                            <source src="video/video.mp4" type="video/mp4"> 
+                            <source src="images/video/video.mp4" type="video/mp4"> 
                             
                     </video>
                 <img class="baner" src="images/bannerImage.png">
@@ -70,12 +72,24 @@
             
             <div class="space"></div>
             
-            <div class="carouselChat gallery js-flickity">
+            <div class="carouselChat sport gallery js-flickity chocolat-parent" data-chocolat-title="first">
                 <div class="gallery-cell">
-                    <img width="200" heigh="150" src="images/chats/adult_products_creative1.jpg">
+                    <a class="chocolat-image" href="images/chats/cosmetic_creative1.jpg" title="caption image 1"><img width="200" heigh="150" src="images/chats/cosmetic_creative1.jpg"></a>
                 </div>
                 <div class="gallery-cell">
-                    <img width="200" heigh="150" src="images/chats/cosmetic_creative1.jpg">
+                    <a class="chocolat-image" href="images/chats/finance_v1.jpg" title="caption image 2"><img width="200" heigh="150" src="images/chats/finance_v1.jpg"></a>
+                </div>
+                 <div class="gallery-cell">
+                    <a class="chocolat-image" href="images/chats/generic_creative1.jpg" title="caption image 3"><img width="200" heigh="150" src="images/chats/generic_creative1.jpg"></a>
+                </div>
+                 <div class="gallery-cell">
+                    <a class="chocolat-image" href="images/chats/generic_creative2.jpg" title="caption image 4"><img width="200" heigh="150" src="images/chats/generic_creative2.jpg"><a>
+                </div>
+            </div>
+
+            <div class="carouselChat travel gallery js-flickity">
+                <div class="gallery-cell">
+                    <img width="200" heigh="150" src="images/chats/adult_products_creative1.jpg">
                 </div>
                 <div class="gallery-cell">
                     <img width="200" heigh="150" src="images/chats/finance_v1.jpg">
@@ -86,11 +100,10 @@
                  <div class="gallery-cell">
                     <img width="200" heigh="150" src="images/chats/generic_creative2.jpg">
                 </div>
-                      
             </div>
            
             <div class="termConditions">
-                <input type="checkbox" value="veChatAccepted">Agree with <a href="#">Terms and Conditions</a>
+                <input type="checkbox" value="veChatAccepted" id="termConditionCheck">Agree with <a href="#">Terms and Conditions</a>
             </div>
             <div class="bottomButtons">
                 <button type="button" class="menuBottom btn">Next</button>
@@ -101,11 +114,10 @@
             © 2015 Ve Interactive Asia
         </div>
     </div>
-    
-    <!--Adding lodash for read the document-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
-    <!--text editor-->
-    <script src="//tinymce.cachefly.net/4.2/tinymce.min.js"></script>
+    <!--Jquery library CDN-->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!--Chocolate for images-->
+    <script type="text/javascript" src="chocolat.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!--carousel slick

@@ -37,14 +37,32 @@
 window.onload= function ()
     {
 
-
+    	$('.chocolat-parent').Chocolat();
 /******Open Carousel*****/  
-	
-	$(".subCategoryGroup .btn:last").on("click",showSlider);
+		var listButtons = $(".subCategoryGroup .btn");
+
+		for (var lista = 0; lista<listButtons.length; lista++)
+		{
+			listButtons[lista].onclick = showSlider;
+		}
 
 
 		function showSlider(){
-			$('.carouselChat').css({"visibility":"visible","height":"auto"})
+			//visible the right carousel
+			if($(this).text() == "SPORT")
+			{
+				$('.carouselChat').css({"visibility":"hidden","height":"0px"});
+				$('.carouselChat.sport').css({"visibility":"visible","height":"auto"})
+			}
+			else if($(this).text() == "TRAVEL")
+			{
+				$('.carouselChat').css({"visibility":"hidden","height":"0px"});
+				$('.carouselChat.travel').css({"visibility":"visible","height":"auto"})
+			}
+			else{
+				$('.carouselChat').css({"visibility":"hidden","height":"0px"});
+				alert("there isn't any chat for that at the moment");
+			}
 
 			console.log("done");
 		}
@@ -73,6 +91,19 @@ window.onload= function ()
 	  freeScroll: true
 	});
 
+	/****Go to next page******/
+
+	$(".bottomButtons .menuBottom.btn").on("click", checkTerms);
+
+	function checkTerms(){
+		if($("#termConditionCheck")[0].checked == false)
+		{
+			alert("Please check the Term&Conditions");
+		}
+		else{
+			location.href = "../veTool/vecontact.html";
+		}
+	}
 }
 
 				
