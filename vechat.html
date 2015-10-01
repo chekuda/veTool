@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>veTool</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale-1"> 
+     
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!--carousel slick
+<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>-->
+<!-- flickity... -->
+<link rel="stylesheet" href="flickity/flickity.css" media="screen">
+
+<link rel="stylesheet" type="text/css" href="css.css">
+<!--Chocolate for images-->
+<link rel="stylesheet" href="chocolat.css" type="text/css" media="screen" charset="utf-8">
+
+
+</head>
+<body>
+    <div id="veChatView">
+        <div class="container-fluid">
+            <nav class="navbar navbar-default topBarmenu" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target=".navbar-ex1-collapse">
+                      <span class="sr-only">Show navigation bar</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand logo" href="#">
+                        <img src="images/logo_ve.png">
+                    </a>
+                </div>
+                 <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav topNavOptions">
+                        <li><a href="../veTool/index.html">Home</a></li>
+                        <li class="active"><a href="../veTool/veChat.html">VeChat</a></li>
+                        <li><a href="../veTool/veContact.html">VeContact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right topNavOptions">
+                        <li><a href="../veTool/contactus.html">contact us</a></li>
+                    </ul>   
+                </div>
+
+            </nav>
+            <div id="content">
+                
+                <div class="bannerImage">
+                    <video id="teaser-video" muted="" autoplay="" loop="" > 
+                                <source src="images/video/video.mp4" type="video/mp4"> 
+                                
+                        </video>
+                    <img class="baner" src="images/bannerImage.png">
+                </div>
+               
+
+                
+                <div class="space"></div>
+                <div class="categoryGroup">
+                        <div class="subCategoryGroup">
+                        <button type="button" class="menuCategory btn">SPORT</button>
+                        <button type="button" class="menuCategory btn">TRAVEL</button>
+                        <button type="button" class="menuCategory btn">FASHION</button>
+                        <button type="button" class="menuCategory btn">BUSINESS</button>
+                        <button type="button" class="menuCategory btn">TECH</button>
+                    </div>
+                </div>
+                
+                <div class="space"></div>
+                
+                <div class="carouselChat sport gallery js-flickity chocolat-parent" data-chocolat-title="first">
+                    <div class="gallery-cell">
+                        <a class="chocolat-image" href="images/chats/cosmetic_creative1.jpg" title="caption image 1"><img width="200" heigh="150" src="images/chats/cosmetic_creative1.jpg"></a>
+                    </div>
+                    <div class="gallery-cell">
+                        <a class="chocolat-image" href="images/chats/finance_v1.jpg" title="caption image 2"><img width="200" heigh="150" src="images/chats/finance_v1.jpg"></a>
+                    </div>
+                     <div class="gallery-cell">
+                        <a class="chocolat-image" href="images/chats/generic_creative1.jpg" title="caption image 3"><img width="200" heigh="150" src="images/chats/generic_creative1.jpg"></a>
+                    </div>
+                     <div class="gallery-cell">
+                        <a class="chocolat-image" href="images/chats/generic_creative2.jpg" title="caption image 4"><img width="200" heigh="150" src="images/chats/generic_creative2.jpg"><a>
+                    </div>
+                </div>
+
+                <div class="carouselChat travel gallery js-flickity">
+                    <div class="gallery-cell">
+                        <img width="200" heigh="150" src="images/chats/adult_products_creative1.jpg">
+                    </div>
+                    <div class="gallery-cell">
+                        <img width="200" heigh="150" src="images/chats/finance_v1.jpg">
+                    </div>
+                     <div class="gallery-cell">
+                        <img width="200" heigh="150" src="images/chats/generic_creative1.jpg">
+                    </div>
+                     <div class="gallery-cell">
+                        <img width="200" heigh="150" src="images/chats/generic_creative2.jpg">
+                    </div>
+                </div>
+               
+                <div class="termConditions">
+                    <input type="checkbox" value="veChatAccepted" id="termConditionCheck">Agree with <a href="#">Terms and Conditions</a>
+                </div>
+                <div class="bottomButtons">
+                    <button type="button" class="menuBottom btn">Next</button>
+                </div>
+                
+            </div>
+            <div class="footer">
+                © 2015 Ve Interactive Asia
+            </div>
+        </div>
+    </div>
+    <!--Jquery library CDN-->
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!--Chocolate for images-->
+    <script type="text/javascript" src="chocolat.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!--carousel slick
+    <script type="text/javascript" src="slick/slick.min.js"></script>-->
+    <!--flickity-->
+    <script src="flickity/flickity.pkgd.min.js"></script>
+    <!-- all your great html... -->
+    <script type="text/javascript" src="js.js"></script>
+
+
+    </body>
+</html>
