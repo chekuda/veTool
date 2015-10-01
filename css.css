@@ -1,5 +1,4 @@
 body{
-  background-image: url(https://assets.brandfolder.com/8h6rjb4l/original/business%20faqs.jpg);
  
 }
 .bannerImage{
@@ -13,6 +12,19 @@ body{
     display: none;
     
  }
+ blockquote{
+ 	    padding: 10px 20px;
+	    margin: 0 0 20px;
+	    font-size: 16.5px;
+	    border-left: 5px solid #B3D043;
+	    background-color: #EDEDED;
+	    opacity: 0.7;
+	    border-top-right-radius: 5px;
+	    border-bottom-right-radius: 5px;
+ }
+ #buttonSend{
+ 	text-align: center;
+ }
  .carouselChat{
  	width: 80%;
  	margin: 0 auto;
@@ -23,6 +35,24 @@ body{
  }
 
  .carouselChat img{
+ 	    margin: 0 auto;
+ 	    width: 200px;
+ 	    height: 150px;
+ 	    margin-top: 10px;
+ 	    margin-bottom: 10px;
+ 	    
+ }
+
+  .carouselveContact{
+ 	width: 80%;
+ 	margin: 0 auto;
+ 	border: solid 1px #cccccc;
+    border-radius: 4px;
+    visibility: hidden;
+ 	height: 0px;
+ }
+
+ .carouselveContact img{
  	    margin: 0 auto;
  	    width: 200px;
  	    height: 150px;
@@ -71,6 +101,12 @@ body{
 .container-fluid{
 	width: 861px;
 }
+.description{
+	width: 30%;
+}
+.description img{
+	margin-bottom: 7px;
+}
 
 .footer{
 	position: relative;
@@ -83,6 +119,11 @@ body{
     color: #fff;
     border-radius: 4px;
 }
+
+.form-group label{
+	color: #fff;
+}
+
 .jumbotron{
 	background-color: #B3D334;
 }
@@ -215,6 +256,26 @@ body{
 .topNavOptions li.active a{
 	color: #555 !important;
 }
+.indexblocks{
+	
+	padding: 10px;
+	color: #fff;
+}
+.indexblocks div{
+	display: inline-block;
+}
+#veChatView{
+	background-image: url(images/index/vePromptBackground.jpg);
+}
+#veContactView{
+	background-image: url(images/index/veContactBackground.jpg);
+}
+#contactUsView{
+	background-image: url(images/index/veIndexBackground.jpg);
+}
+#veindexView{
+	background-image: url(images/index/veIndexBackground.jpg);
+}
 
 
 @media (max-width: 768px) {
@@ -225,6 +286,9 @@ body{
 		display: block;
 		margin: 0 auto;
 		height: 200px;
+	}
+	blockquote{
+		font-size: 10px;
 	}
    
 	.categoryGroup{
@@ -244,6 +308,13 @@ body{
 	#content{
 	background-color: #091D2A;
 	}
+	.description{
+	width: 100%;
+	}
+	.descriptionImage img{
+		width: 100%;
+	}
+
 	.menuCategory{
 		width: 75px;
 	    height: 50px;
