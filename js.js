@@ -52,7 +52,7 @@ window.onload= function ()
     	}*/
 
 
-    	/*****display bigger images***/
+    	/*****display bigger images at carousel***/
     	//
     	//
     	//
@@ -74,11 +74,11 @@ window.onload= function ()
 			//
 			if($(this).text() == "SPORT")
 			{
-				$('.carouselChat').css({"visibility":"hidden","height":"0px"});
-				$('.carouselChat.sport').css({"visibility":"visible","height":"auto"});
+				$('.carouselChat').css({"visibility":"hidden","height":"0px","display":"none"});
+				$('.carouselChat.sport').css({"visibility":"visible","height":"auto","display":"block"});
 
-				$('.carouselveContact').css({"visibility":"hidden","height":"0px"});
-				$('.carouselveContact.sport').css({"visibility":"visible","height":"auto"});
+				$('.carouselveContact').css({"visibility":"hidden","height":"0px","display":"none"});
+				$('.carouselveContact.sport').css({"visibility":"visible","height":"auto","display":"block"});
 
 				$('.carouselveContact .flickity-viewport').css({"height":"320px"});
 				$('.carouselveContact img').css({"height":"300px"});
@@ -87,11 +87,11 @@ window.onload= function ()
 			}
 			else if($(this).text() == "TRAVEL")
 			{
-				$('.carouselChat').css({"visibility":"hidden","height":"0px"});
-				$('.carouselChat.travel').css({"visibility":"visible","height":"auto"});
+				$('.carouselChat').css({"visibility":"hidden","height":"0px","display":"none"});
+				$('.carouselChat.travel').css({"visibility":"visible","height":"auto","display":"block"});
 
-				$('.carouselveContact').css({"visibility":"hidden","height":"0px"});
-				$('.carouselveContact.travel').css({"visibility":"visible","height":"auto"});
+				$('.carouselveContact').css({"visibility":"hidden","height":"0px","display":"none"});
+				$('.carouselveContact.travel').css({"visibility":"visible","height":"auto","display":"block"});
 				
 				$('.carouselveContact .flickity-viewport').css({"height":"320px"});
 				$('.carouselveContact img').css({"height":"300px"});
@@ -110,7 +110,7 @@ window.onload= function ()
 
 
 
-			console.log("done");
+			console.log("slider showed");
 		}
 
 	/*********Category secction******/
@@ -127,6 +127,15 @@ window.onload= function ()
 			}
 		}
 
+	/**********Delete the banner for sector********/
+	//
+	//
+	//
+	$(".bannerSelection").on("mouseover",removeBanner);
+
+	function removeBanner(){
+		$(this).css({"display":"none"});
+	}
 
 
 
@@ -143,21 +152,58 @@ window.onload= function ()
 	  freeScroll: true
 	});
 
-	/****Go to next page******/
+	/****Select a design from carousel******/
 	//
 	//
 	//
-	$(".bottomButtons .menuBottom.btn").on("click", checkTerms);
+	$(".bottomButtons button").on("click", creativeSelected);
 
-	function checkTerms(){
-		if($("#termConditionCheck")[0].checked == false)
-		{
-			alert("Please check the Term&Conditions");
+	function creativeSelected(){
+		//make sure the botton clicked is next so the client want the chat
+		if($(this).text() == "Next"){
+			//if any image has been selected
+			if($(".gallery-cell.is-selected").length != 0){
+				var currentImage = $(".gallery-cell.is-selected img")[0];
+				//create 
+				if($("nav.topBarmenu li.active").text() == "VeContact"){
+					localStorage.setItem('veContact_creative_Selected',currentImage.src);
+					//Call the function sumary to add the images on the popUp sumary
+					sumary();
+				}
+				else{
+					localStorage.setItem('veChat_creative_Selected',currentImage.src);
+				}
+				
+			}
+		}		
+	}
+
+	//""""""""""Add templates for the sumary********
+	//
+	//
+	function sumary(){
+
+		if(localStorage.getItem("veChat_creative_Selected")){
+			var chatTemplate = localStorage.getItem("veChat_creative_Selected");
+			$("#sumaryChat img").attr("src",chatTemplate);
 		}
 		else{
-			location.href = "../veTool/vecontact.html";
+			$(".sumarytemplate:first").css({"display":"none"});
 		}
+		if(localStorage.getItem("veContact_creative_Selected")){
+			var contactTemplate = localStorage.getItem("veContact_creative_Selected");
+			$("#sumaryContact img").attr("src",contactTemplate);
+		}
+		else{
+			$(".sumarytemplate:last").css({"display":"none"});
+		}
+		
 	}
+
+
+
+
+	
 }
 
 				
