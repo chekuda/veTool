@@ -156,7 +156,7 @@ window.onload= function ()
 	//
 	//
 	//
-	$(".bottomButtons button").on("click", creativeSelected);
+	$(".bottomButtons a").on("click", creativeSelected);
 
 	function creativeSelected(){
 		//make sure the botton clicked is next so the client want the chat
