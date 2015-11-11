@@ -306,16 +306,20 @@ body{
 	display: inline-block;
 }
 #veChatView{
-	background-image: url(images/index/vePromptBackground.jpg);
+	/*background-image: url(images/index/vePromptBackground.jpg);*/
+	background-color: #1B7C82;
 }
 #veContactView{
-	background-image: url(images/index/veContactBackground.jpg);
+	/*background-image: url(images/index/veContactBackground.jpg);*/
+	background-color: #187385;
 }
 #contactUsView{
-	background-image: url(images/index/veIndexBackground.jpg);
+	/*background-image: url(images/index/veIndexBackground.jpg);*/
+	background-color: #4F5C65;
 }
 #veindexView{
-	background-image: url(images/index/veIndexBackground.jpg);
+	/*background-image: url(images/index/veIndexBackground.jpg);*/
+	background-color: #4F5C65;
 }
 
 
