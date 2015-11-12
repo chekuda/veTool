@@ -241,14 +241,6 @@ window.onload= function ()
 			window.open("http://www.veinteractive.com/legal-policies/privacy","_blank");
 		}
 	}
-
-	//thankYOu page
-
-	$("form").submit(function (){
-		console.log("jose");
-		alert("checa");
-	});
-
 	
 
 	
