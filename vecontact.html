@@ -66,11 +66,11 @@
                 <div class="categoryGroup">
                         <div class="subCategoryGroup">
                             <div class="bannerSelection"><span class="pulse animated infinite">Please choose your sector</span></div>
-                         <button type="button" class="menuCategory btn" id="sport">SPORT</button>
-                        <button type="button" class="menuCategory btn" id="travel">TRAVEL</button>
-                        <button type="button" class="menuCategory btn" id="fashion">FASHION</button>
-                        <button type="button" class="menuCategory btn" id="business">BUSINESS</button>
-                        <button type="button" class="menuCategory btn" id="tech">TECH</button>
+                         <button type="button" class="menuCategory btn" id="sport">sport</button>
+                        <button type="button" class="menuCategory btn" id="travel">travel</button>
+                        <button type="button" class="menuCategory btn" id="fashion">fashion</button>
+                        <button type="button" class="menuCategory btn" id="business">business</button>
+                        <button type="button" class="menuCategory btn" id="tech">tech</button>
                     </div>
                 </div>
                 
@@ -119,22 +119,44 @@
                         <h4 class="modal-title">Information Required</h4>
                       </div>
                       <div class="modal-body">
-                         <form role="form">
+                         <form role="form" action="http://localhost/veTool/thanks.html" method="post" enctype="multipart/form-data">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="name" placeholder="Insert your name"></input>
+                                <input type="text" class="form-control" id="name" placeholder="Insert your name" required></input>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" id="companyName" placeholder="Insert your company name"></input>
+                                <input type="text" class="form-control" id="companyName" placeholder="Insert your company name" required></input>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" id="URL" placeholder="Insert your URL"></input>
+                                <input type="text" class="form-control" id="URL" placeholder="Insert your URL" required></input>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" id="Telephone" placeholder="Insert your telephone"></input>
+                                <input type="text" class="form-control" id="completeURL" placeholder="Insert your complete URL" required></input>
                             </div>
-                            
                             <div class="form-group">
-                                <textarea class="form-control" rows="7"></textarea>
+                                <input type="text" class="form-control" id="Telephone" placeholder="Insert your telephone" required></input>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" placeholder="Insert your email" required></input>
+                            </div>
+                             <div class="form-group">
+                                <input type="text" class="form-control" id="eccomerce" placeholder="Insert your eccomerce platform if you have"></input>
+                            </div>
+                            <div class="form-group">
+                                <label class="sales">Sale Person</label>
+                                <select class="form-control">
+                                  <option>June</option>
+                                  <option>Jerry</option>
+                                  <option>Lidia</option>
+                                  <option>KK</option>
+                                </select>
+                            </div>
+
+                            <div class="checkbox termsC">
+                              <label><input type="checkbox" value="" required>Terms & Conditions</input></label>
+                            </div>
+                            <div class="information">
+                                <span>Our full Terms of Use can be found by clicking</span> <span id="terms1" href="http://vebuilder.com/doc/VeContract.pdf" target="_blank">here</span><br>
+                                 <span>We take your privacy seriously.  Our Privacy Policy can be found by </span> <span id="terms2">clicking here</span>
                             </div>
                             <div id="buttonSend">
                                 <button type="submit" class="btn btn-default">Submit</button>

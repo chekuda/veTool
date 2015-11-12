@@ -72,7 +72,7 @@ window.onload= function ()
 		function showSlider(){
 			//visible the right carousel
 			//
-			if($(this).text() == "SPORT")
+			if($(this).text() == "sport")
 			{
 				$('.carouselChat').css({"visibility":"hidden","height":"0px","display":"none"});
 				$('.carouselChat.sport').css({"visibility":"visible","height":"auto","display":"block"});
@@ -85,7 +85,7 @@ window.onload= function ()
 
 
 			}
-			else if($(this).text() == "TRAVEL")
+			else if($(this).text() == "travel")
 			{
 				$('.carouselChat').css({"visibility":"hidden","height":"0px","display":"none"});
 				$('.carouselChat.travel').css({"visibility":"visible","height":"auto","display":"block"});
@@ -164,14 +164,16 @@ window.onload= function ()
 			//if any image has been selected
 			if($(".gallery-cell.is-selected").length != 0){
 				var currentImage = $(".gallery-cell.is-selected img")[0];
+				var sectorSelected = $(".subCategoryGroup .menuCategory.active").text();
 				//create 
 				if($("nav.topBarmenu li.active").text() == "VeContact"){
-					localStorage.setItem('veContact_creative_Selected',currentImage.src);
+					sessionStorage.setItem('veContact_creative_Selected',currentImage.src);
 					//Call the function sumary to add the images on the popUp sumary
 					sumary();
 				}
 				else{
-					localStorage.setItem('veChat_creative_Selected',currentImage.src);
+					sessionStorage.setItem('veChat_creative_Selected',currentImage.src);
+					sessionStorage.setItem('companySector',sectorSelected);
 				}
 				
 			}
@@ -183,15 +185,15 @@ window.onload= function ()
 	//
 	function sumary(){
 
-		if(localStorage.getItem("veChat_creative_Selected")){
-			var chatTemplate = localStorage.getItem("veChat_creative_Selected");
+		if(sessionStorage.getItem("veChat_creative_Selected")){
+			var chatTemplate = sessionStorage.getItem("veChat_creative_Selected");
 			$("#sumaryChat img").attr("src",chatTemplate);
 		}
 		else{
 			$(".sumarytemplate:first").css({"display":"none"});
 		}
-		if(localStorage.getItem("veContact_creative_Selected")){
-			var contactTemplate = localStorage.getItem("veContact_creative_Selected");
+		if(sessionStorage.getItem("veContact_creative_Selected")){
+			var contactTemplate = sessionStorage.getItem("veContact_creative_Selected");
 			$("#sumaryContact img").attr("src",contactTemplate);
 		}
 		else{
@@ -200,8 +202,54 @@ window.onload= function ()
 		
 	}
 
+	//Autoselect the sector by sessionStore
+	if($("#veContactView").length != 0 && sessionStorage.getItem("companySector"))
+	{
+		autoSector();
+		function autoSector(){
 
+			var sector = sessionStorage.getItem("companySector");
+			//add class active to the sector button
+			$(".menuCategory.btn#"+sector).addClass("active");
+			//delete the bouncing banner
+			$(".bannerSelection").css({"display":"none"});
+			//display the carousel
+			$('.carouselveContact').css({"visibility":"hidden","height":"0px","display":"none"});
+			$('.carouselveContact.'+sector).css({"visibility":"visible","height":"auto","display":"block"});
 
+			$('.carouselveContact .flickity-viewport').css({"height":"320px"});
+			$('.carouselveContact img').css({"height":"300px"});
+		}
+		
+	}
+
+	//display terms&conditions
+	$("#terms1").on("click",openPDF);
+
+	$("#terms2").on("click",openPDF);
+
+	function openPDF(){
+		if($(this).text() == "here")
+		{
+			//full terms and Conditions
+			window.open("http://vebuilder.com/doc/VeContract.pdf","_blank");
+
+		}
+		else
+		{
+			//Policity
+			window.open("http://www.veinteractive.com/legal-policies/privacy","_blank");
+		}
+	}
+
+	//thankYOu page
+
+	$("form").submit(function (){
+		console.log("jose");
+		alert("checa");
+	});
+
+	
 
 	
 }

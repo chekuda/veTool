@@ -1,6 +1,9 @@
 body{
  
 }
+body.contactUsView{
+	background-color: #4F5C65;
+}
 .bannerImage{
 	text-align:center;
 	overflow-x: hidden;
@@ -137,6 +140,35 @@ body{
     color: #fff;
     border-radius: 4px;
 }
+.footer.thankPage{
+	position: fixed;
+    bottom: 0px;
+    background-color: #323F48;
+    height: 50px;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 15px;
+    color: #fff;
+    border-radius: 4px;
+    width: 74%;
+}
+
+form .information{
+	line-height: 13px;
+    margin-bottom: 15px;
+}
+form .information span{
+	color: #333;
+	font-size: 11px;
+}
+form .information #terms1{
+	color: #337ab7;
+	cursor: pointer;
+}
+form .information #terms2{
+	color: #337ab7;
+	cursor: pointer;
+}
 
 .form-group label{
 	color: #fff;
@@ -208,6 +240,7 @@ body{
   font-size: 20px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
+  text-transform: uppercase;
 }
 .menuCategory.btn.active{
 	background: #c6c6c6;
@@ -232,6 +265,9 @@ body{
 
 .modal-footer{
 	text-align: center;
+}
+.modal-body form .sales{
+	color: #474747;
 }
 
 
@@ -286,6 +322,22 @@ body{
 #termConditionCheck{
 	margin-top: 10px;
 	margin-right: 6px;
+}
+#thankyou{
+	    margin: 0 0 10px;
+	    font-size: 40px;
+	    text-align: center;
+	    margin-top: 15%;
+}
+.thanksImage{
+	    margin-left: 30%;
+	    width: 400px;
+	    margin-top: 80px;
+}
+.thanksImage img{
+		vertical-align: middle;
+	    height: 250px;
+    	width: 360px;
 }
 .topBarmenu{
 	margin-top: 20px;
