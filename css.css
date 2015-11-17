@@ -20,7 +20,9 @@ body.contactUsView{
 	    height: 55px;
 	    position: absolute;
 	    overflow-x: hidden;
-	    background-color: #fff;
+	    /*background-color: #fff;*/
+	    color: #ffffff;
+	    background-color: transparent;
 	    opacity: 0.9;
 	    text-align: center;
 	    text-align: center;
@@ -28,6 +30,9 @@ body.contactUsView{
 	    font-size: 30px;
 	    border-radius: 3px;
 
+ }
+ .bannerSelection span{
+ 	display: block;
  }
 
  blockquote{
@@ -40,21 +45,46 @@ body.contactUsView{
 	    border-top-right-radius: 5px;
 	    border-bottom-right-radius: 5px;
  }
+ .bottomButtons{
+	width: 200px;
+	text-align:center;
+	margin: 0 auto;
+	margin-bottom: 10px;
+
+}
+.bottomButtons a{
+	font-size: 20px;
+    color: #fff;
+    text-decoration: underline;
+}
+.bottomButtons a:hover{
+	color: #BCCF00;
+}
+
  #buttonSend{
  	text-align: center;
  }
+ #buttonSend button{
+ 	background-color: #BCCF00;
+ 	color: #fff;
+ }
+ #buttonSend button:hover{
+ 	background-color: #6E8196;
+ }
 
- .carouselChat{
- 	width: 80%;
+
+ .carousel.chat{
+ 	width: 100%;
  	margin: 0 auto;
  	border: solid 1px #cccccc;
     border-radius: 4px;
     visibility: hidden;
- 	height: 0px;
+    height: 0px;
  	margin-bottom: 30px;
- }
+ 	
+ } 
 
- .carouselChat img{
+ .carousel.chat img{
  	    margin: 0 auto;
  	    width: 200px;
  	    height: 150px;
@@ -63,8 +93,8 @@ body.contactUsView{
  	    
  }
 
-  .carouselveContact{
- 	width: 80%;
+  .carousel.contact{
+ 	width: 100%;
  	margin: 0 auto;
  	border: solid 1px #cccccc;
     border-radius: 4px;
@@ -73,7 +103,7 @@ body.contactUsView{
  	margin-bottom: 40px;
  }
 
- .carouselveContact img{
+ .carousel.contact img{
  	    margin: 0 auto;
  	    width: 200px;
  	    height: 150px;
@@ -87,11 +117,10 @@ body.contactUsView{
     padding-top: 18px;
     padding-bottom: 18px;
     border-radius: 9px;
-    border: solid 1px #ccc;
+    /*border: solid 1px #ccc;*/
     overflow-x:hidden;
     max-height: 140px;
     overflow-y: hidden;
-
 }
 .categoryGroup:hover{
 	overflow-x: hidden;
@@ -100,11 +129,20 @@ body.contactUsView{
 	    width: 786px;
 	    margin-top: 0px;
 	    margin: 0 auto;
+	    text-align: center;
 }
 .categoryGroup .subCategoryGroup::before{
 	.glyphicon.glyphicon-chevron-left();
 }
-
+/*modifying overlay close button*/
+.chocolat-wrapper .chocolat-top
+{
+	height: 40%;
+}
+.chocolat-wrapper .chocolat-close{
+	top: 30%;
+	right: 20%;
+}
 #content{
 	/****with video***/
 	background-color: transparent;
@@ -173,6 +211,12 @@ form .information #terms2{
 .form-group label{
 	color: #fff;
 }
+.gallery-cell{
+	width: 200px;
+}
+.gallery-cell:hover{
+	cursor: pointer;
+}
 
 .jumbotron{
 	background-color: #B3D334;
@@ -189,12 +233,6 @@ form .information #terms2{
     height: 50px;
 }	
 
-.bottomButtons{
-	width: 200px;
-	text-align:center;
-	margin: 0 auto;
-	margin-bottom: 10px;
-}
 
 .menuBottom.btn{
 	-webkit-border-radius: 5;
@@ -204,15 +242,15 @@ form .information #terms2{
   -moz-box-shadow: 2px 2px 12px #666666;
   box-shadow: 2px 2px 12px #666666;
   font-family: Arial;
-  color: #323F48;
+  color: #ffffff;
   font-size: 20px;
-  background: #ffffff;
+  background: #BCCF00;
   /*padding: 20px 20px 20px 20px;*/	
   text-decoration: none;
   
 }
 .menuBottom.btn:hover{
-	background: #efefef;
+	background: #6E8196;
   text-decoration: none;
 
 }
@@ -238,9 +276,10 @@ form .information #terms2{
   font-family: Arial;
   color: #ffffff;
   font-size: 20px;
-  padding: 10px 20px 10px 20px;
+  /*padding: 10px 20px 10px 20px;*/
   text-decoration: none;
   text-transform: uppercase;
+  visibility: hidden;
 }
 .menuCategory.btn.active{
 	background: #c6c6c6;
@@ -280,6 +319,12 @@ form .information #terms2{
 }
 /*End top menu*/
 
+.owl-theme .owl-controls .owl-buttons div:hover{
+	opacity: 1;
+}
+.owl-wrapper-outer{
+	display: none;
+}
 
 .slick-initialized .slick-slide{
 	margin-top: 20px;
@@ -323,6 +368,12 @@ form .information #terms2{
 	margin-top: 10px;
 	margin-right: 6px;
 }
+
+#testbutton{
+	visibility: hidden;
+	text-align: center;
+}
+
 #thankyou{
 	    margin: 0 0 10px;
 	    font-size: 40px;
@@ -371,7 +422,7 @@ form .information #terms2{
 }
 #veindexView{
 	/*background-image: url(images/index/veIndexBackground.jpg);*/
-	background-color: #4F5C65;
+	background-color: #186C81;
 }
 
 
@@ -396,12 +447,14 @@ form .information #terms2{
 	   overflow-x: auto;
 	}	
 	.categoryGroup .subCategoryGroup{
-		width: 420px;
-
+		width: 95%;
 	}
-	.carouselChat img{
-		width: 100px;
-		height: 75px;
+	.carousel.chat{
+		width: 95% !important;
+	}
+	.carousel.chat img{
+		width: 200px;
+		height: 135px;
 	}
 	.container-fluid{
 	width: 100%;
@@ -415,18 +468,22 @@ form .information #terms2{
 	.descriptionImage img{
 		width: 100%;
 	}
+	.gallery-cell{
+		width: 100px;
+	}
 
 	.menuCategory{
-		width: 75px;
-	    height: 50px;
 	    background-color: #B3D334;
 	    margin: 2px;
+	    width: auto;
+	    height: auto;
 	}
 	.menuCategory.btn{
 		padding: 5px;	
 		font-size: 12px;
+		visibility: visible;
 	}
-	
+
 	.slick-initialized .slick-slide{
 	margin-top: 8px;
 	}
@@ -434,8 +491,31 @@ form .information #terms2{
 		height: 195px;
 		display: none;
 	}
+
+	
 	
 }
+
+@media (max-width: 320px) {
+
+	.carousel.chat img{
+		margin-left: 38%;
+	}
+	.carousel.contact img {
+		margin-left: 38%;
+	}
+}
+
+@media (max-width: 375px) {
+
+	.carousel.chat img{
+		margin-left: 70%;
+	}
+	.carousel.contact img {
+		margin-left: 70%;
+	}
+}
+
 
 
 

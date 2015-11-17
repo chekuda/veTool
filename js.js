@@ -33,9 +33,31 @@
 
 
 });*/
+ var owl= $(".carousel");
 
-window.onload= function ()
+
+$(document).ready(function(){
+
+ owl.owlCarousel({
+		    center: true,
+		    loop:true,
+		    margin:10,
+		    navigation : true,
+		    pagination : false,
+		    itemsDesktop : [2400,4],
+		    itemsDesktopSmall : [980,1],
+		    itemsMobile : [479,1],
+		    itemsTablet: [768,3]
+		    
+		});
+
+
+})
+
+
+window.onload = function ()
     {
+
 
     	/******Active menu*******/
     	//
@@ -72,37 +94,40 @@ window.onload= function ()
 		function showSlider(){
 			//visible the right carousel
 			//
+			//Arrows for carousel
+			$("#testbutton").css({"visibility":"visible"});
+			$('.owl-wrapper-outer').css({"display":"block"});
+			$('.carousel.chat').css({"visibility":"hidden","height":"0px","display":"none"});
+			$('.carousel.contact').css({"visibility":"hidden","height":"0px","display":"none"});
+
 			if($(this).text() == "sport")
 			{
-				$('.carouselChat').css({"visibility":"hidden","height":"0px","display":"none"});
-				$('.carouselChat.sport').css({"visibility":"visible","height":"auto","display":"block"});
-
-				$('.carouselveContact').css({"visibility":"hidden","height":"0px","display":"none"});
-				$('.carouselveContact.sport').css({"visibility":"visible","height":"auto","display":"block"});
-
-				$('.carouselveContact .flickity-viewport').css({"height":"320px"});
-				$('.carouselveContact img').css({"height":"300px"});
+				$('.carousel.chat.sport').css({"visibility":"visible","height":"auto","display":"block"});
+				$('.carousel.contact.sport').css({"visibility":"visible","height":"auto","display":"block"});
+				$('.carousel.contact img').css({"height":"300px"});
 
 
 			}
 			else if($(this).text() == "travel")
 			{
-				$('.carouselChat').css({"visibility":"hidden","height":"0px","display":"none"});
-				$('.carouselChat.travel').css({"visibility":"visible","height":"auto","display":"block"});
+				$('.carousel.chat.travel').css({"visibility":"visible","height":"auto","display":"block"});
+				$('.carousel.contact.travel').css({"visibility":"visible","height":"auto","display":"block"});
+				$('.carousel.contact img').css({"height":"300px"});
 
-				$('.carouselveContact').css({"visibility":"hidden","height":"0px","display":"none"});
-				$('.carouselveContact.travel').css({"visibility":"visible","height":"auto","display":"block"});
-				
-				$('.carouselveContact .flickity-viewport').css({"height":"320px"});
-				$('.carouselveContact img').css({"height":"300px"});
+			}
+			else if($(this).text() == "fashion")
+			{
+				$('.carousel.chat.travel').css({"visibility":"visible","height":"auto","display":"block"});
+				$('.carousel.contact.travel').css({"visibility":"visible","height":"auto","display":"block"});
+				$('.carousel.contact img').css({"height":"300px"});
 
 			}
 			else{
-				$('.carouselChat').css({"visibility":"hidden","height":"0px"});
-				$('.carouselveContact').css({"visibility":"hidden","height":"0px"});
+				$('.carousel.chat').css({"visibility":"hidden","height":"0px"});
+				$('.carousel.contact').css({"visibility":"hidden","height":"0px"});
 
-				$('.carouselveContact .flickity-viewport').css({"height":"170px"});
-				$('.carouselveContact img').css({"height":"150px"});
+				$('.carousel.contact .flickity-viewport').css({"height":"170px"});
+				$('.carousel.contact img').css({"height":"150px"});
 
 
 				alert("there isn't any chat for that at the moment");
@@ -135,24 +160,23 @@ window.onload= function ()
 
 	function removeBanner(){
 		$(this).css({"display":"none"});
+		$(".menuCategory.btn").css({"visibility":"visible"});
 	}
 
 
 
 	/****carousel*****/
 	//
-	var elem = document.querySelector('.main-gallery');
-	var flkty = new Flickity( elem, {
-	  // options
-	  //
-	  cellAlign: 'left',
-	  contain: true,
-	  imagesLoaded: true,
-	  wrapAround: true,
-	  freeScroll: true
-	});
+	//Add border to selected image
+	$(".gallery-cell").on("click",selectDesing);
 
-	/****Select a design from carousel******/
+	function selectDesing()
+	{
+		$(".gallery-cell").removeClass("is-selected");
+		$(this).addClass("is-selected");
+	}
+
+	/****Save design in sessionStore from carousel******/
 	//
 	//
 	//
@@ -177,6 +201,11 @@ window.onload= function ()
 				}
 				
 			}
+			else{//this for the client who wants only vePrompt
+				if($("nav.topBarmenu li.active").text() == "VeContact"){
+					sumary();
+				}
+			}
 		}		
 	}
 
@@ -188,6 +217,7 @@ window.onload= function ()
 		if(sessionStorage.getItem("veChat_creative_Selected")){
 			var chatTemplate = sessionStorage.getItem("veChat_creative_Selected");
 			$("#sumaryChat img").attr("src",chatTemplate);
+			$("#sumaryChat img").css({"display":"block"});
 		}
 		else{
 			$(".sumarytemplate:first").css({"display":"none"});
@@ -195,6 +225,7 @@ window.onload= function ()
 		if(sessionStorage.getItem("veContact_creative_Selected")){
 			var contactTemplate = sessionStorage.getItem("veContact_creative_Selected");
 			$("#sumaryContact img").attr("src",contactTemplate);
+			$("#sumaryContact img").css({"display":"block"});
 		}
 		else{
 			$(".sumarytemplate:last").css({"display":"none"});
@@ -211,14 +242,16 @@ window.onload= function ()
 			var sector = sessionStorage.getItem("companySector");
 			//add class active to the sector button
 			$(".menuCategory.btn#"+sector).addClass("active");
+			//display sectionsMenu
+			$(".menuCategory.btn").css({"visibility":"visible"});
 			//delete the bouncing banner
 			$(".bannerSelection").css({"display":"none"});
 			//display the carousel
-			$('.carouselveContact').css({"visibility":"hidden","height":"0px","display":"none"});
-			$('.carouselveContact.'+sector).css({"visibility":"visible","height":"auto","display":"block"});
+			$('.carousel.contact').css({"visibility":"hidden","height":"0px","display":"none"});
+			$('.carousel.contact.'+sector).css({"visibility":"visible","height":"auto","display":"block"});
 
-			$('.carouselveContact .flickity-viewport').css({"height":"320px"});
-			$('.carouselveContact img').css({"height":"300px"});
+			$('.carousel.contact .owl-wrapper-outer').css({"display":"block"});
+			$('.carousel.contact img').css({"height":"300px"});
 		}
 		
 	}

@@ -12,14 +12,24 @@
 <!--carousel slick
 <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>-->
-<!-- flickity... -->
-<link rel="stylesheet" href="flickity/flickity.css" media="screen">
+<!-- flickity... 
+<link rel="stylesheet" href="flickity/flickity.css" media="screen">-->
 
-<link rel="stylesheet" type="text/css" href="css.css">
+
 <!--Chocolate for images-->
 <link rel="stylesheet" href="chocolat.css" type="text/css" media="screen" charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="css.css">
+
 <!--animations-->
 <link rel="stylesheet" type="text/css" href="css/animation.css">
+
+<!-- Important Owl stylesheet -->
+<link rel="stylesheet" href="js/owl-carousel/owl.carousel.css">
+ 
+<!-- Default Theme -->
+<link rel="stylesheet" href="js/owl-carousel/owl.theme.css">
+
 
 </head>
 <body>
@@ -45,7 +55,7 @@
                         <li><a href="../veTool/vecontact.html">VeContact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right topNavOptions">
-                        <li><a href="../veTool/contactus.html">contact us</a></li>
+                        <li><a href="../veTool/contactus.html">Contact Us</a></li>
                     </ul>   
                 </div>
 
@@ -65,44 +75,56 @@
                 <div class="space"></div>
                 <div class="categoryGroup">
                         <div class="subCategoryGroup">
-                        <div class="bannerSelection"><span class="pulse animated infinite">Please choose your sector</span></div>
-                        <button type="button" class="menuCategory btn" id="sport">sport</button>
+                        <div class="bannerSelection"><span class="pulse animated infinite">&lt; Please choose your sector &gt;</span></div>
+                         <button type="button" class="menuCategory btn" id="sport">sport</button>
                         <button type="button" class="menuCategory btn" id="travel">travel</button>
                         <button type="button" class="menuCategory btn" id="fashion">fashion</button>
                         <button type="button" class="menuCategory btn" id="business">business</button>
-                        <button type="button" class="menuCategory btn" id="tech">tech</button>
+                        <button type="button" class="menuCategory btn" id="tech">Generic</button>
+                        <button type="button" class="menuCategory btn" id="tech">Electronic</button>
+                        <button type="button" class="menuCategory btn" id="tech">Cosmetic</button>
+                        <button type="button" class="menuCategory btn" id="tech">Gifts</button>
                     </div>
                 </div>
                 
                 <div class="space"></div>
                 
-                <div class="carouselChat sport gallery js-flickity chocolat-parent" data-chocolat-title="first">
+                <div class="carousel chat sport gallery chocolat-parent" data-chocolat-title="first">
                     <div class="gallery-cell">
-                        <a class="chocolat-image" href="images/chats/veChatsport1.jpg" title="caption image 1"><img width="200" heigh="150" src="images/chats/veChatsport1.jpg"></a>
+                        <img class="chocolat-image" href="images/chats/veChatsport1.jpg" src="images/chats/veChatsport1.jpg">
                     </div>
                     <div class="gallery-cell">
-                        <a class="chocolat-image" href="images/chats/veChatsport2.jpg" title="caption image 2"><img width="200" heigh="150" src="images/chats/veChatsport2.jpg"></a>
+                        <img class="chocolat-image" href="images/chats/veChatsport2.jpg" src="images/chats/veChatsport2.jpg">
                     </div>
                      <div class="gallery-cell">
-                        <a class="chocolat-image" href="images/chats/veChatsport3.jpg" title="caption image 3"><img width="200" heigh="150" src="images/chats/veChatsport3.jpg"></a>
+                        <img class="chocolat-image" href="images/chats/veChatsport3.jpg" src="images/chats/veChatsport3.jpg">
                     </div>
                      <div class="gallery-cell">
-                        <a class="chocolat-image" href="images/chats/veChatsport4.jpg" title="caption image 4"><img width="200" heigh="150" src="images/chats/veChatsport4.jpg"><a>
+                        <img class="chocolat-image" href="images/chats/veChatsport4.jpg" src="images/chats/veChatsport4.jpg">
+                    </div>
+                    <div class="gallery-cell">
+                        <img class="chocolat-image" href="images/chats/veChatsport1.jpg" src="images/chats/veChatsport1.jpg">
+                    </div>
+                    <div class="gallery-cell">
+                        <img class="chocolat-image" href="images/chats/veChatsport2.jpg" src="images/chats/veChatsport2.jpg">
+                    </div>
+                     <div class="gallery-cell">
+                        <img class="chocolat-image" href="images/chats/veChatsport3.jpg" src="images/chats/veChatsport3.jpg">
                     </div>
                 </div>
 
-                <div class="carouselChat travel gallery js-flickity">
+                <div class="carousel chat travel gallery chocolat-parent" data-chocolat-title="second">
                     <div class="gallery-cell">
-                        <img width="200" heigh="150" src="images/chats/veChatsport1.jpg">
+                        <img class="chocolat-image" href="images/chats/veChatsport1.jpg" src="images/chats/veChatsport1.jpg">
                     </div>
                     <div class="gallery-cell">
-                        <img width="200" heigh="150" src="images/chats/veChatsport2.jpg">
+                        <img class="chocolat-image" href="images/chats/veChatsport2.jpg" src="images/chats/veChatsport2.jpg">
                     </div>
                      <div class="gallery-cell">
-                        <img width="200" heigh="150" src="images/chats/veChatsport3.jpg">
+                        <img class="chocolat-image" href="images/chats/veChatsport3.jpg" src="images/chats/veChatsport3.jpg">
                     </div>
                      <div class="gallery-cell">
-                        <img width="200" heigh="150" src="images/chats/veChatsport4.jpg">
+                        <img class="chocolat-image" href="images/chats/veChatsport4.jpg" src="images/chats/veChatsport4.jpg">
                     </div>
                 </div>
                
@@ -110,8 +132,8 @@
                     <input type="checkbox" value="veChatAccepted" id="termConditionCheck">Agree with <a href="#">Terms and Conditions</a>
                 </div>-->
                 <div class="bottomButtons">
-                    <a role="button" class="menuBottom btn" href="../veTool/vecontact.html">Next</a>
-                    <a role="button" class="menuBottom btn" href="../veTool/vecontact.html">Skip</a>
+                    <a href="../veTool/vecontact.html">Next</a>
+                    <a href="../veTool/vecontact.html">Skip</a>
                 </div>
                 
             </div>
@@ -126,10 +148,9 @@
     <script type="text/javascript" src="chocolat.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <!--carousel slick
-    <script type="text/javascript" src="slick/slick.min.js"></script>-->
-    <!--flickity-->
-    <script src="flickity/flickity.pkgd.min.js"></script>
+    <!--carousel-->
+    <script src="js/owl-carousel/owl.carousel.js"></script>
+
     <!-- all your great html... -->
     <script type="text/javascript" src="js.js"></script>
 

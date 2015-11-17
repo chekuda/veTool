@@ -9,17 +9,19 @@
      
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <!--carousel slick
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>-->
-    <!-- flickity... -->
-    <link rel="stylesheet" href="flickity/flickity.css" media="screen">
 
     <link rel="stylesheet" type="text/css" href="css.css">
     <!--Chocolate for images-->
     <link rel="stylesheet" href="chocolat.css" type="text/css" media="screen" charset="utf-8">
     <!--animations-->
-<link rel="stylesheet" type="text/css" href="css/animation.css">
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
+
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="js/owl-carousel/owl.carousel.css">
+     
+    <!-- Default Theme -->
+    <link rel="stylesheet" href="js/owl-carousel/owl.theme.css">
+
 
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 </head>
@@ -46,7 +48,7 @@
                         <li class="active"><a href="../veTool/vecontact.html">VeContact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right topNavOptions">
-                        <li><a href="../veTool/contactus.html">contact us</a></li>
+                        <li><a href="../veTool/contactus.html">Contact Us</a></li>
                     </ul>   
                 </div>
 
@@ -65,44 +67,71 @@
                 <div class="space"></div>
                 <div class="categoryGroup">
                         <div class="subCategoryGroup">
-                            <div class="bannerSelection"><span class="pulse animated infinite">Please choose your sector</span></div>
+                            <div class="bannerSelection"><span class="pulse animated infinite">&lt; Please choose your sector &gt;</span></div>
                          <button type="button" class="menuCategory btn" id="sport">sport</button>
                         <button type="button" class="menuCategory btn" id="travel">travel</button>
                         <button type="button" class="menuCategory btn" id="fashion">fashion</button>
                         <button type="button" class="menuCategory btn" id="business">business</button>
-                        <button type="button" class="menuCategory btn" id="tech">tech</button>
+                        <button type="button" class="menuCategory btn" id="tech">Generic</button>
+                        <button type="button" class="menuCategory btn" id="tech">Electronic</button>
+                        <button type="button" class="menuCategory btn" id="tech">Cosmetic</button>
+                        <button type="button" class="menuCategory btn" id="tech">Gifts</button>
                     </div>
                 </div>
                 
                 <div class="space"></div>
                 
-                <div class="carouselveContact sport gallery js-flickity chocolat-parent" data-chocolat-title="first">
+                <div class="carousel contact sport gallery chocolat-parent" data-chocolat-title="first">
                     <div class="gallery-cell">
-                        <a class="chocolat-image" href="images/veContactTemplates/first.jpg" title="caption image 1"><img src="images/veContactTemplates/first.jpg"></a>
+                        <img class="chocolat-image" href="images/veContactTemplates/first.jpg" src="images/veContactTemplates/first.jpg">
                     </div>
                     <div class="gallery-cell">
-                        <a class="chocolat-image" href="images/veContactTemplates/second.jpg" title="caption image 2"><img src="images/veContactTemplates/second.jpg"></a>
+                        <img class="chocolat-image" href="images/veContactTemplates/second.jpg" src="images/veContactTemplates/second.jpg">
                     </div>
                      <div class="gallery-cell">
-                        <a class="chocolat-image" href="images/veContactTemplates/third.jpg" title="caption image 3"><img src="images/veContactTemplates/third.jpg"></a>
+                        <img class="chocolat-image" href="images/veContactTemplates/third.jpg" src="images/veContactTemplates/third.jpg">
                     </div>
                      <div class="gallery-cell">
-                        <a class="chocolat-image" href="images/veContactTemplates/forth.jpg" title="caption image 4"><img src="images/veContactTemplates/forth.jpg"><a>
+                        <img class="chocolat-image" href="images/veContactTemplates/forth.jpg" src="images/veContactTemplates/forth.jpg">
+                    </div>
+                    <div class="gallery-cell">
+                        <img class="chocolat-image" href="images/veContactTemplates/first.jpg" src="images/veContactTemplates/first.jpg">
+                    </div>
+                    <div class="gallery-cell">
+                        <img class="chocolat-image" href="images/veContactTemplates/second.jpg" src="images/veContactTemplates/second.jpg">
+                    </div>
+                     <div class="gallery-cell">
+                        <img class="chocolat-image" href="images/veContactTemplates/third.jpg" src="images/veContactTemplates/third.jpg">
+                    </div>
+                     <div class="gallery-cell">
+                        <img class="chocolat-image" href="images/veContactTemplates/forth.jpg" src="images/veContactTemplates/forth.jpg">
                     </div>
                 </div>
 
-                <div class="carouselveContact travel gallery js-flickity chocolat-parent" data-chocolat-title="first">
+                <div class="carousel contact travel gallery chocolat-parent" data-chocolat-title="second">
                     <div class="gallery-cell">
-                        <a class="chocolat-image" href="images/veContactTemplates/first.jpg" title="caption image 1"><img src="images/veContactTemplates/first.jpg"></a>
+                        <img class="chocolat-image" href="images/veContactTemplates/first.jpg" src="images/veContactTemplates/first.jpg">
                     </div>
                     <div class="gallery-cell">
-                        <a class="chocolat-image" href="images/veContactTemplates/second.jpg" title="caption image 2"><img src="images/veContactTemplates/second.jpg"></a>
+                        <img class="chocolat-image" href="images/veContactTemplates/second.jpg" src="images/veContactTemplates/second.jpg">
                     </div>
                      <div class="gallery-cell">
-                        <a class="chocolat-image" href="images/veContactTemplates/third.jpg" title="caption image 3"><img src="images/veContactTemplates/third.jpg"></a>
+                        <img class="chocolat-image" href="images/veContactTemplates/third.jpg" src="images/veContactTemplates/third.jpg">
                     </div>
                      <div class="gallery-cell">
-                        <a class="chocolat-image" href="images/veContactTemplates/forth.jpg" title="caption image 4"><img src="images/veContactTemplates/forth.jpg"><a>
+                        <img class="chocolat-image" href="images/veContactTemplates/forth.jpg" src="images/veContactTemplates/forth.jpg">
+                    </div>
+                    <div class="gallery-cell">
+                        <img class="chocolat-image" href="images/veContactTemplates/first.jpg" src="images/veContactTemplates/first.jpg">
+                    </div>
+                    <div class="gallery-cell">
+                        <img class="chocolat-image" href="images/veContactTemplates/second.jpg" src="images/veContactTemplates/second.jpg">
+                    </div>
+                     <div class="gallery-cell">
+                        <img class="chocolat-image" href="images/veContactTemplates/third.jpg" src="images/veContactTemplates/third.jpg">
+                    </div>
+                     <div class="gallery-cell">
+                        <img class="chocolat-image" href="images/veContactTemplates/forth.jpg" src="images/veContactTemplates/forth.jpg">
                     </div>
                 </div>
                
@@ -138,16 +167,53 @@
                             <div class="form-group">
                                 <input type="email" class="form-control" id="email" placeholder="Insert your email" required></input>
                             </div>
-                             <div class="form-group">
-                                <input type="text" class="form-control" id="eccomerce" placeholder="Insert your eccomerce platform if you have"></input>
+                              <div class="form-group">
+                                <label class="sales">Ecommerce Platform</label>
+                                <select class="form-control">
+                                    <option value=""></option>
+                                  <option value="GoogleTagManager">GoogleTagManager</option>
+                                  <option value="Magento">Magento</option>
+                                  <option value="Venda">Venda</option>
+                                  <option value="OS Commerce">OS Commerce</option>
+                                  <option value="Volusion">Volusion</option>
+                                  <option value="Maginus">Maginus</option>
+                                  <option value="Shopify">Shopify</option>
+                                  <option value="OpenCart">OpenCart</option>
+                                  <option value="UberCart">UberCart</option>
+                                  <option value="BigCommerce">BigCommerce</option>
+                                  <option value="Demandware">Demandware</option>
+                                  <option value="XCart">XCart</option>
+                                  <option value="Prestashop">Prestashop</option>
+                                  <option value="Oxid">Oxid</option>
+                                  <option value="Zencart">Zencart</option>
+                                  <option value="Tray">Tray</option>
+                                  <option value="Bitrix">Bitrix</option>
+                                  <option value="SeoShop">SeoShop</option>
+                                  <option value="Woocommerce">Woocommerce</option>
+                                  <option value="Drupal">Drupal</option>
+                                  <option value="VisualSoft">VisualSoft</option>
+                                  <option value="Shopware">Shopware</option>
+                                  <option value="Fastbooking">Fastbooking</option>
+                                  <option value="Episerver">Episerver</option>
+                                  <option value="Shopex">Shopex</option>
+                                  <option value="Ensighten">Ensighten</option>
+                                  <option value="CsCart">CsCart</option>
+                                  <option value="Umi">Umi</option>
+                                  <option value="Cube">Cube</option>
+                                  <option value="Opentag">Opentag</option>
+                                  <option value="other">other</option>
+
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label class="sales">Sale Person</label>
                                 <select class="form-control">
-                                  <option>June</option>
-                                  <option>Jerry</option>
-                                  <option>Lidia</option>
-                                  <option>KK</option>
+                                     <option value=""></option>
+                                    <option value="Adrien">Adrien</option>
+                                  <option value="June">June</option>
+                                  <option value="Jerry">Jerry</option>
+                                  <option value="Lidia">Lidia</option>
+                                  <option value="KK">KK</option>
                                 </select>
                             </div>
 
@@ -181,8 +247,8 @@
                 </div>
 
                 <div class="bottomButtons">
-                    <a role="button" class="menuBottom btn" data-toggle="modal" data-target="#myModal">Next</a>
-                    <a role="button" class="menuBottom btn" href="../veTool/vechat.html">Skip</a>
+                    <a data-toggle="modal" data-target="#myModal">Next</a>
+                    <a href="../veTool/vechat.html">Skip</a>
                 </div>
                 
             </div>
@@ -198,10 +264,9 @@
     <script type="text/javascript" src="chocolat.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <!--carousel slick
-    <script type="text/javascript" src="slick/slick.min.js"></script>-->
-    <!--flickity-->
-    <script src="flickity/flickity.pkgd.min.js"></script>
+     <!--carousel-->
+    <script src="js/owl-carousel/owl.carousel.js"></script>
+
     <!-- all your great html... -->
     <script type="text/javascript" src="js.js"></script>
 
