@@ -38,7 +38,8 @@
 
 $(document).ready(function(){
 
- owl.owlCarousel({
+if(owl.length != 0 ){
+	owl.owlCarousel({
 		    center: true,
 		    loop:true,
 		    margin:10,
@@ -50,6 +51,8 @@ $(document).ready(function(){
 		    itemsTablet: [768,3]
 		    
 		});
+}
+ 
 
 
 })

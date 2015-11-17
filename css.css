@@ -60,7 +60,11 @@ body.contactUsView{
 .bottomButtons a:hover{
 	color: #BCCF00;
 }
-
+.bottomButtons span{
+	color: #fff;
+	width: 20px;
+	text-align: center;
+}
  #buttonSend{
  	text-align: center;
  }
@@ -134,15 +138,7 @@ body.contactUsView{
 .categoryGroup .subCategoryGroup::before{
 	.glyphicon.glyphicon-chevron-left();
 }
-/*modifying overlay close button*/
-.chocolat-wrapper .chocolat-top
-{
-	height: 40%;
-}
-.chocolat-wrapper .chocolat-close{
-	top: 30%;
-	right: 20%;
-}
+
 #content{
 	/****with video***/
 	background-color: transparent;
@@ -410,15 +406,15 @@ form .information #terms2{
 }
 #veChatView{
 	/*background-image: url(images/index/vePromptBackground.jpg);*/
-	background-color: #1B7C82;
+	background-color: #186C81;
 }
 #veContactView{
 	/*background-image: url(images/index/veContactBackground.jpg);*/
-	background-color: #187385;
+	background-color: #186C81;
 }
 #contactUsView{
 	/*background-image: url(images/index/veIndexBackground.jpg);*/
-	background-color: #4F5C65;
+	background-color: #186C81;
 }
 #veindexView{
 	/*background-image: url(images/index/veIndexBackground.jpg);*/
