@@ -111,17 +111,38 @@ window.onload = function ()
 
 
 			}
-			else if($(this).text() == "travel")
+			else if($(this).text() == "electronic")
 			{
-				$('.carousel.chat.travel').css({"visibility":"visible","height":"auto","display":"block"});
-				$('.carousel.contact.travel').css({"visibility":"visible","height":"auto","display":"block"});
+				$('.carousel.chat.electronic').css({"visibility":"visible","height":"auto","display":"block"});
+				$('.carousel.contact.electronic').css({"visibility":"visible","height":"auto","display":"block"});
 				$('.carousel.contact img').css({"height":"300px"});
 
 			}
 			else if($(this).text() == "fashion")
 			{
-				$('.carousel.chat.travel').css({"visibility":"visible","height":"auto","display":"block"});
-				$('.carousel.contact.travel').css({"visibility":"visible","height":"auto","display":"block"});
+				$('.carousel.chat.fashion').css({"visibility":"visible","height":"auto","display":"block"});
+				$('.carousel.contact.fashion').css({"visibility":"visible","height":"auto","display":"block"});
+				$('.carousel.contact img').css({"height":"300px"});
+
+			}
+			else if($(this).text() == "financial")
+			{
+				$('.carousel.chat.financial').css({"visibility":"visible","height":"auto","display":"block"});
+				$('.carousel.contact.financial').css({"visibility":"visible","height":"auto","display":"block"});
+				$('.carousel.contact img').css({"height":"300px"});
+
+			}
+			else if($(this).text() == "generic")
+			{
+				$('.carousel.chat.generic').css({"visibility":"visible","height":"auto","display":"block"});
+				$('.carousel.contact.generic').css({"visibility":"visible","height":"auto","display":"block"});
+				$('.carousel.contact img').css({"height":"300px"});
+
+			}
+			else if($(this).text() == "adult")
+			{
+				$('.carousel.chat.adult').css({"visibility":"visible","height":"auto","display":"block"});
+				$('.carousel.contact.adult').css({"visibility":"visible","height":"auto","display":"block"});
 				$('.carousel.contact img').css({"height":"300px"});
 
 			}
@@ -204,11 +225,28 @@ window.onload = function ()
 				}
 				
 			}
-			else{//this for the client who wants only vePrompt
+			else{//this for the client who wants only vePrompt and click Next
 				if($("nav.topBarmenu li.active").text() == "VeContact"){
 					sumary();
 				}
 			}
+		}
+		else{
+			//if we are in contact page and chat has been selected
+			if($(this).text() == "Skip")
+			{
+				if($("#veContactView .bottomButtons a").length !=0 && sessionStorage.getItem("veChat_creative_Selected"))
+				{
+					sumary();
+					$("#veContactView .bottomButtons a").attr({"data-toggle":"modal","data-target":"#myModal"});
+
+				}
+				else
+				{
+					$("#veContactView .bottomButtons a").attr({"href":"../veTool/vechat.html"});
+				}
+			}
+
 		}		
 	}
 
