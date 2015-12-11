@@ -220,6 +220,32 @@ form .information #terms2{
 .gallery-cell.is-selected img{
 	border: solid 3px #61F4F8;
 }
+
+.icon.icon-btn.bounce{
+	background-color: #1F1F1F;
+    display: inline-block;
+    color: #FFF;
+    font-family: 'icomoon';
+    speak: none;
+    font-weight: normal;
+    line-height: 1;
+    left: 96%;
+    margin-top: 45px;
+    margin-left: -25px;
+    height: 30px;
+    width: 50px;
+    -webkit-animation: bounce 1s infinite;
+    position: absolute;
+}
+
+@-webkit-keyframes bounce {
+  0%       { bottom:5px; }
+  25%, 75% { bottom:15px; }
+  50%      { bottom:20px; }
+  100%     {bottom:0;}
+}
+
+
 .logo{
 	padding-top: 0px;
 	margin-right: 50px;
