@@ -1,5 +1,5 @@
-body{
- 
+html,body{
+ height: 100%;
 }
 body.contactUsView{
 	background-color: #4F5C65;
@@ -31,6 +31,7 @@ body.contactUsView{
 	    border-radius: 3px;
 
  }
+
  .bannerSelection span{
  	display: block;
  }
@@ -56,6 +57,7 @@ body.contactUsView{
 	font-size: 20px;
     color: #fff;
     text-decoration: underline;
+    cursor: pointer;
 }
 .bottomButtons a:hover{
 	color: #BCCF00;
@@ -80,18 +82,18 @@ body.contactUsView{
  .carousel.chat{
  	width: 100%;
  	margin: 0 auto;
- 	border: solid 1px #cccccc;
     border-radius: 4px;
+    border: solid 1px #cccccc;
     visibility: hidden;
     height: 0px;
- 	margin-bottom: 30px;
+ 	margin-bottom: 10px;
  	
  } 
 
  .carousel.chat img{
  	    margin: 0 auto;
- 	    width: 200px;
- 	    height: 150px;
+ 	    width: 100%;
+ 	    height: auto;
  	    margin-top: 10px;
  	    margin-bottom: 10px;
  	    
@@ -109,7 +111,7 @@ body.contactUsView{
 
  .carousel.contact img{
  	    margin: 0 auto;
- 	    width: 200px;
+ 	    width: 100%;
  	    height: 150px;
  	    margin-top: 10px;
  	    margin-bottom: 10px;
@@ -123,22 +125,27 @@ body.contactUsView{
     border-radius: 9px;
     /*border: solid 1px #ccc;*/
     overflow-x:hidden;
-    max-height: 140px;
+    max-height: inherit;
     overflow-y: hidden;
 }
 .categoryGroup:hover{
 	overflow-x: hidden;
 }
 .categoryGroup .subCategoryGroup{
-	    width: 786px;
+	    width: 800px;
 	    margin-top: 0px;
 	    margin: 0 auto;
 	    text-align: center;
 }
-.categoryGroup .subCategoryGroup::before{
-	.glyphicon.glyphicon-chevron-left();
-}
 
+.chat.owl-carousel .owl-wrapper{
+	height: 270px;
+	position: relative;
+}
+.contact.owl-carousel .owl-wrapper{
+	height: 370px;
+	position: relative;
+}
 #content{
 	/****with video***/
 	background-color: transparent;
@@ -175,16 +182,12 @@ body.contactUsView{
     border-radius: 4px;
 }
 .footer.thankPage{
-	position: fixed;
+	 position: absolute;
     bottom: 0px;
-    background-color: #323F48;
-    height: 50px;
-    margin-top: 20px;
     text-align: center;
     padding-top: 15px;
     color: #fff;
     border-radius: 4px;
-    width: 74%;
 }
 
 form .information{
@@ -209,9 +212,28 @@ form .information #terms2{
 }
 .gallery-cell{
 	width: 200px;
+	position: relative;
+	height: 100%;
+	line-height: 231px;
+}
+.contact .gallery-cell{
+	width: 190px;
+	position: relative;
+	height: 100%;
+	line-height: 231px;
 }
 .gallery-cell:hover{
 	cursor: pointer;
+}
+
+.indexblocks .desktopBannerImage{
+	display: block;
+	margin: 0 auto;
+}
+
+.indexblocks .mobileBannerImage{
+	display: none;
+	margin: 0 auto;
 }
 
 .jumbotron{
@@ -219,6 +241,12 @@ form .information #terms2{
 }
 .gallery-cell.is-selected img{
 	border: solid 3px #61F4F8;
+}
+.menuUnclick{
+	color: #fff !important;
+    padding: 15px;
+        display: block;
+    position: relative;
 }
 
 .icon.icon-btn.bounce{
@@ -245,6 +273,11 @@ form .information #terms2{
   100%     {bottom:0;}
 }
 
+.lan{
+	display: inline-block;
+	color: white;
+	cursor: pointer;
+}
 
 .logo{
 	padding-top: 0px;
@@ -303,6 +336,7 @@ form .information #terms2{
   text-transform: uppercase;
   visibility: hidden;
 }
+
 .menuCategory.btn.active{
 	background: #c6c6c6;
   background-image: -webkit-linear-gradient(top, #c6c6c6, #D0D0D0);
@@ -323,6 +357,17 @@ form .information #terms2{
   text-decoration: none;
 }
 
+.menuCategory.btn a{
+	color: #fff;
+    text-decoration: none;
+}
+
+.modal-internTitles{
+	text-align: center;
+	margin-bottom: 10px;
+    /*border-bottom: solid 1px #ccc;*/
+
+}
 
 .modal-footer{
 	text-align: center;
@@ -330,7 +375,15 @@ form .information #terms2{
 .modal-body form .sales{
 	color: #474747;
 }
+.modal-title{
+	text-align: center;
+	  background-color: #323F48;
+    color: #fff;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 5px;
 
+}
 
 /*Start top menu*/
 .nav-tabs.nav-justified{
@@ -339,14 +392,55 @@ form .information #terms2{
 .nav-tabs.nav-justified>.active>a{
 	background-color: #F0F0F0;
 }
+
 /*End top menu*/
 
+/*carousel buttons*/
+.owl-theme .owl-controls .owl-buttons div{
+
+	    position: absolute;
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-prev{
+
+	top: 45%;
+	left: -45px;
+}
+.owl-theme .owl-controls .owl-buttons .owl-next{
+
+	top: 45%;
+	right: -45px;
+}
 .owl-theme .owl-controls .owl-buttons div:hover{
 	opacity: 1;
 }
+
+.owl-item{
+	height: 100%;
+	position: relative;
+}
+
 .owl-wrapper-outer{
 	display: none;
 }
+
+ .selection{
+ 	width: 40px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #fff;
+    border-color: transparent;
+    bottom: 5px;
+    position: relative;
+	margin-left: 80px;
+	display: inherit;
+ }
+  .selection.selectionSelected{
+ 	
+    background-color: #BBCF00;;
+    color: #000;
+    border-color: transparent;
+ }
 
 .slick-initialized .slick-slide{
 	margin-top: 20px;
@@ -365,11 +459,23 @@ form .information #terms2{
 	display: inline-block;
 	margin: 6px;
 }
+#sumaryclose{
+	display: none;
+	background: url("images/close.png");
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    z-index: 10000;
+    position: relative;
+    cursor: pointer;
+    left: 100%;
+}
 
-#teaser-video{
-	height: 470px;
+
+.teaser-video{
+	    height: 340px;
+    width: 600px;
 	display: block;
-    width: 833px;
     margin: auto;
     border-radius: 12px;
 }
@@ -403,14 +509,23 @@ form .information #terms2{
 	    margin-top: 15%;
 }
 .thanksImage{
-	    margin-left: 30%;
-	    width: 400px;
+	    
+	    width: auto;
 	    margin-top: 80px;
+	       text-align: center;
+
 }
 .thanksImage img{
 		vertical-align: middle;
 	    height: 250px;
     	width: 360px;
+}
+#thanksPage{
+	background-color: #fff;
+	min-height: 100%;
+    margin-bottom: -70px;
+    padding-bottom: 50px;
+	
 }
 .topBarmenu{
 	margin-top: 20px;
@@ -422,6 +537,10 @@ form .information #terms2{
 .topNavOptions li.active a{
 	color: #555 !important;
 }
+.topNavOptions li.active span{
+	background-color: #e7e7e7 !important;
+	color: #555 !important;
+	}
 .indexblocks{
 	
 	padding: 10px;
@@ -430,23 +549,39 @@ form .information #terms2{
 .indexblocks div{
 	display: inline-block;
 }
+
 #veChatView{
 	/*background-image: url(images/index/vePromptBackground.jpg);*/
 	background-color: #186C81;
+	min-height: 100%;
+    margin-bottom: -70px;
+    padding-bottom: 50px;
 }
 #veContactView{
 	/*background-image: url(images/index/veContactBackground.jpg);*/
 	background-color: #186C81;
+	min-height: 100%;
+    margin-bottom: -70px;
+    padding-bottom: 50px;
 }
 #contactUsView{
 	/*background-image: url(images/index/veIndexBackground.jpg);*/
 	background-color: #186C81;
+	min-height: 100%;
+    margin-bottom: -70px;
+    padding-bottom: 50px;
 }
 #veindexView{
 	/*background-image: url(images/index/veIndexBackground.jpg);*/
 	background-color: #186C81;
+	min-height: 100%;
+    margin-bottom: -70px;
+        padding-bottom: 50px;
 }
 
+.player .controls{
+	display: none;
+}
 
 @media (max-width: 768px) {
 	body{
@@ -471,29 +606,44 @@ form .information #terms2{
 	.categoryGroup .subCategoryGroup{
 		width: 95%;
 	}
+	.carousel.contact{
+		width: 75% !important;
+	}
 	.carousel.chat{
-		width: 95% !important;
+		width: 75% !important;
 	}
 	.carousel.chat img{
 		width: 200px;
 		height: 135px;
+		
 	}
 	.container-fluid{
 	width: 100%;
 	}
-	#content{
-	background-color: #091D2A;
-	}
+	
 	.description{
 	width: 100%;
+	}
+	.footer{
+		background-color: transparent;
 	}
 	.descriptionImage img{
 		width: 100%;
 	}
-	.gallery-cell{
-		width: 100px;
+	
+	.hiddenPage{
+		visibility: visible;
+	}
+	.indexblocks .desktopBannerImage{
+	display: none;
+	
 	}
 
+	.indexblocks .mobileBannerImage{
+		display: block;
+		width: 250px;
+
+	}
 	.menuCategory{
 	    background-color: #B3D334;
 	    margin: 2px;
@@ -509,7 +659,7 @@ form .information #terms2{
 	.slick-initialized .slick-slide{
 	margin-top: 8px;
 	}
-	#teaser-video{
+	.teaser-video{
 		height: 195px;
 		display: none;
 	}
@@ -518,23 +668,43 @@ form .information #terms2{
 	
 }
 
-@media (max-width: 320px) {
+@media (max-width: 325px) {
 
 	.carousel.chat img{
-		margin-left: 38%;
+		margin-left: 65%;
 	}
 	.carousel.contact img {
-		margin-left: 38%;
+		margin-left: 75%;
+	}
+	.hiddenPage{
+		visibility: visible;
+	}
+	.thanksImage img{
+		vertical-align: middle;
+	    height: auto;
+    	width: 290px;
 	}
 }
 
 @media (max-width: 375px) {
 
 	.carousel.chat img{
-		margin-left: 70%;
+		margin-left: 9px;
+
 	}
 	.carousel.contact img {
-		margin-left: 70%;
+		margin-left: 12px;
+	}
+	.selection{
+	    margin-left: 92px;
+	}
+	.hiddenPage{
+		visibility: visible;
+	}
+	.thanksImage img{
+		vertical-align: middle;
+	    height: auto;
+    	width: 290px;
 	}
 }
 
