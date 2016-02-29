@@ -16,7 +16,7 @@ $(document).ready(function(){
 			      ],
 			    pagination : false,
 			    itemsDesktop : [2400,4],
-			    itemsDesktopSmall : [980,1],
+			    itemsDesktopSmall : [980,3],
 			    itemsMobile : [479,1],
 			    itemsTablet: [768,2]
 			    
@@ -241,17 +241,6 @@ window.onload = function ()
 		}
 		else{
 
-			if(sessionStorage.getItem("veChat_creative_Selected")){
-				var chatTemplate = sessionStorage.getItem("veChat_creative_Selected");
-				$("#sumaryChat img").attr("src",chatTemplate);
-				$("#sumaryChat img").attr("name",chatTemplate);
-				$("#sumaryChat img").css({"display":"block"});
-				$(".chatClose").css({"display":"block"});
-				$("#chatTemplate").val(chatTemplate);
-			}
-			else{
-				$(".sumarytemplate:first").css({"display":"none"});
-			}
 			if(sessionStorage.getItem("veContact_creative_Selected")){
 				var contactTemplate = sessionStorage.getItem("veContact_creative_Selected");
 				$("#sumaryContact img").attr("src",contactTemplate);
@@ -259,6 +248,10 @@ window.onload = function ()
 				$("#sumaryContact img").css({"display":"block"});
 				$(".contactClose").css({"display":"block"});
 				$("#contactTemplate").val(contactTemplate);
+				if($(window).width()>325)
+				{
+					$(".sumarytemplate").css({"height":"436px"});
+				}
 
 				$("#veContactEmail").css({"display":"block"});//Add veContact sender Email from Form
 				$("#veContactEmail").attr("required",true);
@@ -270,8 +263,22 @@ window.onload = function ()
 				$(".sumarytemplate:last").css({"display":"none"});
 			}
 
+			if(sessionStorage.getItem("veChat_creative_Selected")){
+				var chatTemplate = sessionStorage.getItem("veChat_creative_Selected");
+				$("#sumaryChat img").attr("src",chatTemplate);
+				$("#sumaryChat img").attr("name",chatTemplate);
+				$("#sumaryChat img").css({"display":"block"});
+				$(".chatClose").css({"display":"block"});
+				$("#chatTemplate").val(chatTemplate);
+			}
+			else{
+				$(".sumarytemplate:first").css({"display":"none"});
+			}
+			
+
 			//Call modal() if the client has any of the templates in sessionStorage
 			$("#myModal").modal();
+			
 		}
 		
 		
@@ -324,7 +331,8 @@ window.onload = function ()
 		//remove senderEmail from Form
 		$("#veContactEmail").css({"display":"none"});//remove veContact sender Email
 		$("#veContactEmail").attr("required",false);
-
+		$(".sumarytemplate").css({"height":"auto"});
+		
 	}
 
 	//display terms&conditions

@@ -8,11 +8,18 @@ body.contactUsView{
 	text-align:center;
 	overflow-x: hidden;
 }
-.bannerImage img{
+.bannerImage img.banner{
 	width: 80%;
     height: 300px;
     border-radius: 5px;
     display: none;
+    
+ }
+ .bannerImage img.mainBanner{
+	width: 80%;
+    height: 40%;
+    display: block;
+    margin: 0 auto;
     
  }
  .bannerSelection{
@@ -458,6 +465,7 @@ form .information #terms2{
 	width: 200px;
 	display: inline-block;
 	margin: 6px;
+	height: 436p
 }
 #sumaryclose{
 	display: none;
@@ -587,10 +595,14 @@ form .information #terms2{
 	body{
 		background: transparent;
 	}
-	.bannerImage img{
+	.bannerImage img.banner{
 		display: block;
 		margin: 0 auto;
 		height: 200px;
+	}
+	.bannerImage img.mainBanner{
+		display: none;
+		
 	}
 	 .bannerSelection{
  	    display: none;
@@ -683,6 +695,9 @@ form .information #terms2{
 		vertical-align: middle;
 	    height: auto;
     	width: 290px;
+	}
+	.sumarytemplate{
+		height: auto;
 	}
 }
 

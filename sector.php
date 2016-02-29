@@ -7,15 +7,15 @@
                     <?php if($_SERVER['REQUEST_URI'] == '/veTool/veprompt')
                     {
 
-                        print '<iframe frameborder="0" class="teaser-video" src="//www.dailymotion.com/embed/video/x3nmapv?autoplay=1&mute=1&controls=false&related=0"  allowfullscreen></iframe>';
+                        print '<img class="mainBanner" src="images/banners/vePromptBanner.gif" alt="veContact demostration">';
                   
                     }
                     if($_SERVER['REQUEST_URI'] == '/veTool/vecontact')
                     {
-                        print '<iframe frameborder="0" class="teaser-video" src="//www.dailymotion.com/embed/video/x3nm6s3?autoplay=1&mute=1&controls=false&related=0&automute=1" allowscriptaccess="always" allowfullscreen></iframe>';
+                        print '<img class="mainBanner" src="images/banners/veContactBanner.gif" alt="veContact demostration">';
                     }?> 
                      
-                    <img class="baner" src="images/bannerImage.png">
+                    <img class="banner" src="images/bannerImage.png">
                 </div>
                
 
