@@ -39,9 +39,9 @@ if(!session_id())
                     <ul class="nav navbar-nav topNavOptions">
                         <li <?php if($_SERVER['REQUEST_URI']=='/veTool/index') { echo 'class="active"';} ?>><a class="visiblePage" id="index" href="index"><?php echo $lang["MENU_HOME"];?></a></li>
                         <li class="menulineHide"></li>
-                        <li <?php if($_SERVER['REQUEST_URI']=='/veTool/veprompt') { echo 'class="active"';} ?>><span class="menuUnclick" ><?php echo $lang["MENU_VEPROMPT"];?></span></li>
+                        <li <?php if($_SERVER['REQUEST_URI']=='/veTool/veprompt') { echo 'class="active"';} ?>><a class="menuUnclick" href="veprompt"><?php echo $lang["MENU_VEPROMPT"];?></a></li>
                         <li class="menuline"></li>
-                        <li <?php if($_SERVER['REQUEST_URI']=='/veTool/vecontact') { echo 'class="active"';} ?>><span class="menuUnclick"><?php echo $lang["MENU_VECONTACT"];?><span></li>
+                        <li <?php if($_SERVER['REQUEST_URI']=='/veTool/vecontact') { echo 'class="active"';} ?>><a class="menuUnclick" href="vecontact"><?php echo $lang["MENU_VECONTACT"];?></a></li>
                         <li class="menuline"></li>
                         <li ><span class="menuUnclick" id="setup"><?php echo $lang["MENU_SET_UP"];?><span></li>
                     </ul>

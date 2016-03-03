@@ -336,11 +336,11 @@ window.onload = function ()
 	}
 
 	//display terms&conditions
-	$("#terms1").on("click",openPDF);
+	$("#terms1").on("click",openveContract);
 
-	$("#terms2").on("click",openPDF);
+	$("#terms2").on("click",openPrivacePolicy);
 
-	function openPDF(){
+	function openveContract(){
 		var openTerm = $(this).text();
 		if(openTerm == "here" || openTerm == "đây" || openTerm == "点击" || openTerm == "此" )
 		{
@@ -348,10 +348,13 @@ window.onload = function ()
 			window.open("http://vebuilder.com/doc/VeContract.pdf","_blank");
 
 		}
-		else
+	}
+	function openPrivacePolicy(){
+		var openTerm = $(this).text();
+		if(openTerm == "here" || openTerm == "đây" || openTerm == "点击" || openTerm == "此" )
 		{
 			//Policity
-			window.open("http://www.veinteractive.com/legal-policies/privacy","_blank");
+			window.open("https://www.veinteractive.com/about-us/legal-policies/privacy-policy/","_blank");
 		}
 	}
 	

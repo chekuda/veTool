@@ -54,7 +54,7 @@
 	//@@Contact Us
 	//
 	//
-	$lang["CONTACTUS_BLOCKQUOTE"] = "<p>Please use the contact form if you have any questions or requests concerning our services. <br>We will aim to respond to your message within [48 hours].<br>An alternative recommendation is to contact your Digital Consultant directly.</p>";
+	$lang["CONTACTUS_BLOCKQUOTE"] = "<p>Please use the contact form if you have any questions or requests concerning our services. <br>We will aim to respond to your message within 48 hours.<br>An alternative recommendation is to contact your Digital Consultant directly.</p>";
     $lang["CONTACTUS_NAME"] = "Name";
     $lang["CONTACTUS_INSERT_NAME"] ="Insert your name";
     $lang["CONTACTUS_COMPANY"] = "Company Name";
