@@ -22,13 +22,26 @@
 	//
 	//
 
+	$lang["INDEX_BANNER"] = "schi/desktopBannerSchi";
 	$lang["INDEX_START"] = "开始";
+
 
 	//@@Sector section
 	//
 	//
 
 	$lang["ANIMATION"] = "&lt; 请选择您的品类和行业 &gt;";
+	$lang["PROMPT_BANNER"] = "<img class='mainBanner' src='images/banners/schi/vePromptBannerSchi.gif' alt='vePrompt demostration'>";
+	$lang["CONTACT_BANNER"] = "<img class='mainBanner' src='images/banners/schi/veContactBannerSchi.gif' alt='veContact demostration'>";
+	$lang["adult"] ="成人";
+	$lang["cosmetic"] ="化妆护肤";
+	$lang["electronic"] ="电子数码";
+	$lang["fashion"] ="时尚";
+	$lang["financial"] ="金融理财";
+	$lang["generic"] ="传统";
+	$lang["gift"] ="礼物";
+	$lang["travel"] ="旅行";
+	$lang["sport"] ="运动";
 
 	//@Next section
 

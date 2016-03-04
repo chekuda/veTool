@@ -17,7 +17,7 @@ if(!session_id())
                 
                 
                 <div class="indexblocks">
-                    <img class="desktopBannerImage" src="images/desktopBanner.gif">
+                    <img class="desktopBannerImage" src="images/banners/<?php echo $lang["INDEX_BANNER"];?>.gif">
                     <img class="mobileBannerImage" src="images/mobileBanner.gif">
                 </div>
                 

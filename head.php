@@ -36,7 +36,6 @@ if(file_exists ("languages/".$_SESSION["language"].".php"))
     <link rel="stylesheet" href="js/owl-carousel/owl.theme.css">
 
        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-
 </head>
 
 <!--@@Array of vePrompt/veContact images path-->
@@ -64,6 +63,16 @@ if(file_exists ("languages/".$_SESSION["language"].".php"))
    
    return $result; 
 } 
-$chat_images = dirToArray('images/carousel/chats');
-$contact_images = dirToArray('images/carousel/contact');
+
+if(isset($_SESSION["language"]))
+{
+  $chat_images = dirToArray('images/carousel/chats/'.$_SESSION["language"].'/');
+  $contact_images = dirToArray('images/carousel/contact/'.$_SESSION["language"].'/');
+}
+else{
+  $chat_images = dirToArray('images/carousel/chats/EN/');
+  $contact_images = dirToArray('images/carousel/contact/EN/');
+
+}
+
 ?>

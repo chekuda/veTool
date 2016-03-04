@@ -7,12 +7,12 @@
                     <?php if($_SERVER['REQUEST_URI'] == '/veTool/veprompt')
                     {
 
-                        print '<img class="mainBanner" src="images/banners/vePromptBanner.gif" alt="veContact demostration">';
+                        echo $lang["PROMPT_BANNER"];
                   
                     }
                     if($_SERVER['REQUEST_URI'] == '/veTool/vecontact')
                     {
-                        print '<img class="mainBanner" src="images/banners/veContactBanner.gif" alt="veContact demostration">';
+                       echo $lang["CONTACT_BANNER"];
                     }?> 
                      
                     <img class="banner" src="images/bannerImage.png">
@@ -27,10 +27,13 @@
                         <?php
                             foreach ($chat_images as $key => $value) 
                             {
-                            ?>
-                            <button type="button" class="menuCategory btn" id="<?php echo $key;?>"><a href="#carouselView"><?php echo $key;?></a></button>
-                            <?php
-
+                                /*Make sure to add new sectors into the language files if needed*/
+                                if(isset($lang[''.$key.'']))
+                                {
+                                    ?>
+                                    <button type="button" class="menuCategory btn" id="<?php echo $key;?>"><a href="#carouselView"><?php echo $lang[''.$key.''];?></a></button>
+                                    <?php
+                                }
                             }
                         ?>
                        

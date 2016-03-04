@@ -31,8 +31,14 @@ $(document).ready(function(){
 	{
 		//Firs idea about client should provide the complete URL
 		//$('#completeURL').tooltip({title: "The final page that a customer lands on when they have successfully purchased", placement: "top"});
+		var languagePop="The 'EmailFrom' address that your customer sees when receiving an email e.g. support@abc.com";
 
-		$('#veContactEmail').tooltip({title: "The 'EmailFrom' address that your customer sees when receiving an email e.g. support@abc.com", placement: "bottom"}); 
+		if($("#step3").text().indexOf("置") != -1)
+		{
+			languagePop="一个用来发送VeContact邮件的公司电子邮箱地址,例如support@abc.com";
+		}
+
+		$('#veContactEmail').tooltip({title: languagePop, placement: "bottom"}); 
 	}
 
 	/********************
@@ -95,7 +101,7 @@ window.onload = function ()
 
 			
 			var currentApp;
-			var currentSector = $(this).text();
+			var currentSector = $(this).attr("id");
 
 			
 
@@ -202,7 +208,7 @@ window.onload = function ()
 			//if any image has been selected
 			if($(".selection.selectionSelected").length != 0){
 				var currentImage = $(".selection.selectionSelected")[0];
-				var sectorSelected = $(".subCategoryGroup .menuCategory.active").text();
+				var sectorSelected = $(".subCategoryGroup .menuCategory.active").attr("id");
 				if(currentImage && sectorSelected)
 				{
 					//if the customer if on veContact page, the image will be saved on sessionStore and call the sumary() 

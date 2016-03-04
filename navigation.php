@@ -6,20 +6,20 @@ if(!session_id())
 ?>
 
 <!--@@Language Selector-->
-<!--<div class="language">
+<div class="language">
     <div class="lan">
         <span class="lan_selection">EN</span>
     </div>
     <div class="lan">
+        <span class="lan_selection">SCHI</span>
+    </div>
+  <!--  <div class="lan">
         <span class="lan_selection">TCHI</span>
     </div>
     <div class="lan">
-        <span class="lan_selection">SCHI</span>
-    </div>
-    <div class="lan">
         <span class="lan_selection">VI</span>
-    </div>
-</div>-->
+    </div>-->
+</div>
 
  <!--@@NAVIGATION PART-->
  <nav class="navbar navbar-default topBarmenu" role="navigation">

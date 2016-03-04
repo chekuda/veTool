@@ -21,7 +21,7 @@
 	//@@Home Page
 	//
 	//
-
+	$lang["INDEX_BANNER"] = "en/desktopBanner";
 	$lang["INDEX_START"] = "Get started";
 
 	//@@Sector section
@@ -29,6 +29,17 @@
 	//
 
 	$lang["ANIMATION"] = "&lt; Please choose your sector &gt;";
+	$lang["PROMPT_BANNER"] = "<img class='mainBanner' src='images/banners/en/vePromptBanner.gif' alt='vePrompt demostration'>";
+	$lang["CONTACT_BANNER"] = "<img class='mainBanner' src='images/banners/en/veContactBanner.gif' alt='veContact demostration'>";
+	$lang["adult"] ="adult";
+	$lang["cosmetic"] ="cosmetic";
+	$lang["electronic"] ="electronic";
+	$lang["fashion"] ="fashion";
+	$lang["financial"] ="financial";
+	$lang["generic"] ="generic";
+	$lang["gift"] ="gift";
+	$lang["travel"] ="travel";
+	$lang["sport"] ="sport";
 
 	//@Next section
 
