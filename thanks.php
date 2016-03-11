@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!session_id())
+{
+    session_start();
+}
    
 if(isset($_POST['name'])&&isset($_POST['company'])&&isset($_POST['email'])&&isset($_POST['comment'])){
 
