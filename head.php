@@ -1,5 +1,4 @@
 <?php 
-
 if(!session_id())
 {
     session_start();
@@ -66,8 +65,8 @@ if(file_exists ("languages/".$_SESSION["language"].".php"))
 
 if(isset($_SESSION["language"]))
 {
-  $chat_images = dirToArray('images/carousel/chats/'.$_SESSION["language"].'/');
-  $contact_images = dirToArray('images/carousel/contact/'.$_SESSION["language"].'/');
+  $chat_images = dirToArray('images/carousel/chats/'.$_SESSION["language"].'');
+  $contact_images = dirToArray('images/carousel/contact/'.$_SESSION["language"].'');
 }
 else{
   $chat_images = dirToArray('images/carousel/chats/EN/');
